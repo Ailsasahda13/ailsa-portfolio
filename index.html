@@ -3,273 +3,937 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Personal portfolio website of Ailsa Sahda Garizah - Business Information Systems Student & Software Developer">
-  <title>Portfolio | Ailsa Sahda Garizah</title>
+  <meta name="description" content="Portfolio of Ailsa Sahda Garizah - Business Information Systems Student at Politeknik Negeri Malang. Specializing in Laravel, Flutter, and MySQL.">
+  <meta name="keywords" content="Ailsa Sahda Garizah, Portfolio, Business Information Systems, Polinema, Web Developer, Flutter, Laravel, MySQL, IT Internship">
+  <meta name="author" content="Ailsa Sahda Garizah">
+  <title>Ailsa Sahda Garizah | Portfolio — Business Information Systems & Software Developer</title>
+
+  <!-- Google Fonts: DM Sans & Playfair Display -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
-  <!-- Devicon Library untuk Icon Tech Stack -->
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..800;1,9..40,400..800&family=Playfair+Display:ital,wght@0,600..800;1,600..800&display=swap" rel="stylesheet">
+
+  <!-- Devicon Library for Tech Stack Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+  
+  <!-- Main Stylesheet -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+  <!-- =========================================================================
+       SITE HEADER / NAVIGATION
+       ========================================================================= -->
   <header class="site-header">
     <a class="brand" href="#home" aria-label="Return to homepage">ailsa<span>folio.</span></a>
-    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+    
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
+    
     <nav class="nav-links" id="navLinks">
       <a href="#about">About</a>
-      <a href="#experience">Experience</a>
       <a href="#projects">Projects</a>
+      <a href="#experience">Leadership</a>
+      <a href="#credentials">Certifications</a>
       <a href="#skills">Skills</a>
-      <a class="nav-contact" href="#contact">Let's Talk ↗</a>
+      
+      <div class="nav-actions">
+        <button class="btn-nav-outline open-cv-modal" type="button">Resume ↗</button>
+        <a class="btn-nav-filled" href="#contact">Let's Talk ↗</a>
+      </div>
     </nav>
   </header>
 
   <main>
-    <!-- HERO SECTION: Menyoroti Kompetensi Utama & Branding -->
+    <!-- =======================================================================
+         HERO SECTION: High-Impact First Impression for Assessors
+         ======================================================================= -->
     <section class="hero section" id="home">
       <div class="hero-copy reveal">
-        <p class="eyebrow"><span class="eyebrow-dot"></span> Business Information Systems Student (GPA 3.70 / 4.00)</p>
-        <h1>Bridging business needs <em>with software solutions.</em></h1>
-        <p class="hero-description">Hi! I'm <strong>Ailsa Sahda Garizah</strong>, an IT undergraduate at Politeknik Negeri Malang with a strong passion for web & mobile development, database management, and turning ideas into functional digital apps[cite: 4, 5].</p>
-        <div class="hero-actions">
-          <a class="button button-primary" href="#projects">Explore my work <span>↘</span></a>
-          <a class="text-link" href="#about">Get to know me <span>↗</span></a>
+        <div class="hero-status-pill">
+          <span class="eyebrow-dot pulse"></span>
+          <span>Open for IT Internship &amp; Junior Roles</span>
         </div>
-        <div class="hero-note"><span class="note-line"></span> Focused on continuous learning and impactful building.</div>
-      </div>
-      
-      <!-- HERO ART: POLAROID FRAME -->
-      <div class="hero-art reveal">
-        <div class="art-frame">
-          <div class="clean-photo-wrapper">
-            <img src="assets/images/foto ktm.jpg.jpeg" alt="Ailsa Sahda Garizah" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
-            <div class="image-placeholder"><span>AILSA<br>PHOTO</span><small>Add photo</small></div>
+
+        <h1>Bridging business needs <em>with software solutions.</em></h1>
+        
+        <p class="hero-description">
+          Hi! I'm <strong>Ailsa Sahda Garizah</strong>, a Business Information Systems student at 
+          <strong>Politeknik Negeri Malang (GPA 3.70 / 4.00)</strong> with hands-on experience developing 
+          web and mobile applications using <strong>Laravel, Flutter, and MySQL</strong>. I bridge business logic 
+          and modern software engineering to create dependable, real-world digital solutions.
+        </p>
+
+        <div class="hero-actions">
+          <a class="button button-primary" href="#projects">Explore Projects <span>↓</span></a>
+          <button class="button button-secondary open-cv-modal" type="button">View Resume / CV <span>↗</span></button>
+          <a class="button-text" href="#contact">Contact Me <span>→</span></a>
+        </div>
+
+        <!-- 4 Key Proof Points for Assessors -->
+        <div class="hero-metrics">
+          <div class="metric-item">
+            <span class="metric-number">3.70</span>
+            <span class="metric-label">GPA / 4.00 (Polinema)</span>
+          </div>
+          <div class="metric-item">
+            <span class="metric-number">3+</span>
+            <span class="metric-label">Core Systems Built</span>
+          </div>
+          <div class="metric-item">
+            <span class="metric-number">2nd</span>
+            <span class="metric-label">Business IT Competition</span>
+          </div>
+          <div class="metric-item">
+            <span class="metric-number">NVIDIA</span>
+            <span class="metric-label">Certified in LLMs</span>
           </div>
         </div>
       </div>
 
-      <a class="scroll-cue" href="#about">SCROLL TO EXPLORE <span>↓</span></a>
+      <!-- Hero Polaroid Portrait -->
+      <div class="hero-art reveal">
+        <div class="hero-frame-container">
+          <div class="hero-floating-badge badge-top">
+            <span class="badge-icon code">💻</span>
+            <span>Laravel • Flutter • MySQL</span>
+          </div>
+
+          <div class="polaroid-frame">
+            <div class="polaroid-photo">
+              <img src="assets/images/profile.jpg" alt="Ailsa Sahda Garizah" onerror="this.src='assets/images/foto ktm.jpg.jpeg'">
+            </div>
+            <div class="polaroid-caption">
+              <div>
+                <div class="caption-name">Ailsa Sahda Garizah</div>
+                <div class="caption-dept">Business Information Systems '24</div>
+              </div>
+              <span style="font-size: 1.2rem; color: #743D45;">✦</span>
+            </div>
+          </div>
+
+          <div class="hero-floating-badge badge-bottom">
+            <span class="badge-icon cert">🎓</span>
+            <span>Polinema • GPA 3.70</span>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- ABOUT SECTION: Kampus, Passion, & Detail Pribadi -->
+    <!-- =======================================================================
+         01 / ABOUT SECTION: Academic Edge & Background
+         ======================================================================= -->
     <section class="section about-section" id="about">
       <div class="section-heading reveal">
-        <p class="eyebrow">01 / ABOUT ME</p>
-        <h2>More about <em>me.</em></h2>
+        <p class="eyebrow"><span class="eyebrow-dot"></span> 01 / ACADEMIC FOUNDATION &amp; ABOUT</p>
+        <h2>Systems perspective, <em>software execution.</em></h2>
+        <p class="section-intro">
+          How my background in Business Information Systems allows me to analyze organizational pain points 
+          and engineer resilient software.
+        </p>
       </div>
 
-      <div class="about-card-container reveal">
-        <div class="about-left-col">
-          <div class="quote-badge quote-badge-expanded">
-            <span class="sparkle">✦</span>
-            <p class="quote-text">"Curiosity turns technical concepts into real-world value."</p>
+      <div class="about-grid reveal">
+        <!-- Profile Quick Card -->
+        <div class="about-profile-card">
+          <div class="about-quote">
+            <span class="quote-icon">✦</span>
+            <blockquote>
+              "Curiosity turns technical concepts into real-world business value."
+            </blockquote>
           </div>
 
-          <div class="about-social-links">
-            <a href="https://github.com/Ailsasahda13" target="_blank" rel="noopener noreferrer" class="social-btn">GitHub ↗</a>
-            <a href="https://www.linkedin.com/in/ailsasahda" target="_blank" rel="noopener noreferrer" class="social-btn">LinkedIn ↗</a>
-            <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" class="social-btn">Instagram ↗</a>
+          <div class="about-facts-list">
+            <div class="fact-row">
+              <span class="fact-icon">🏛️</span>
+              <div>
+                <div class="fact-label">University</div>
+                <div class="fact-value">Politeknik Negeri Malang (Polinema)</div>
+              </div>
+            </div>
+            <div class="fact-row">
+              <span class="fact-icon">🎓</span>
+              <div>
+                <div class="fact-label">Major &amp; Department</div>
+                <div class="fact-value">Business Information System | IT Dept</div>
+              </div>
+            </div>
+            <div class="fact-row">
+              <span class="fact-icon">📈</span>
+              <div>
+                <div class="fact-label">Academic Standing</div>
+                <div class="fact-value">GPA 3.70 / 4.00</div>
+              </div>
+            </div>
+            <div class="fact-row">
+              <span class="fact-icon">📍</span>
+              <div>
+                <div class="fact-label">Location &amp; Languages</div>
+                <div class="fact-value">Malang, Indonesia • Indonesian &amp; English</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-socials">
+            <a href="https://github.com/Ailsasahda13" target="_blank" rel="noopener noreferrer" class="social-pill">
+              <i class="devicon-github-original"></i> GitHub ↗
+            </a>
+            <a href="https://www.linkedin.com/in/ailsasahda" target="_blank" rel="noopener noreferrer" class="social-pill">
+              <i class="devicon-linkedin-plain colored"></i> LinkedIn ↗
+            </a>
+            <a href="mailto:ailsagarizah@gmail.com" class="social-pill">
+              ✉ Email ↗
+            </a>
           </div>
         </div>
 
-        <div class="about-right-col">
-          <div class="bio-box">
-            <h3>Turning complex requirements into clean applications.</h3>
-            <p>I am currently studying <strong>Business Information Systems at Politeknik Negeri Malang</strong> with a GPA of 3.70 / 4.00[cite: 4]. My passion lies at the intersection of business analysis and modern software development, specializing in Laravel and Flutter frameworks[cite: 4].</p>
-            <p>Beyond writing code, I actively engage in organizational leadership and collaborative project-based learning (PBL) to build solutions that genuinely solve users' pain points.</p>
+        <!-- Narrative & Coursework -->
+        <div class="about-narrative-card">
+          <div class="narrative-content">
+            <h3>Bridging the gap between business stakeholders and software engineers.</h3>
+            <p>
+              Many software initiatives struggle not because of syntax, but because technical teams and business stakeholders 
+              speak different languages. Studying <strong>Business Information Systems</strong> has trained me to look at applications 
+              through both lenses: user operational workflows and robust system architecture.
+            </p>
+            <p>
+              Through hands-on <strong>Project-Based Learning (PBL)</strong> at Polinema, I have designed and delivered full-stack web platforms 
+              in <strong>Laravel &amp; MySQL</strong>, as well as cross-platform mobile apps using <strong>Flutter</strong>. I thrive on collaborating 
+              in multi-disciplinary teams, writing structured code, and implementing role-based workflows that solve concrete business operational needs.
+            </p>
           </div>
 
-          <div class="focus-pills">
-            <span>Web Development</span>
-            <span>Mobile Development</span>
-            <span>Database Systems</span>
-            <span>Business IT</span>
+          <div class="coursework-box">
+            <h4>Relevant Academic Coursework</h4>
+            <div class="coursework-tags">
+              <span>Advanced Web Programming</span>
+              <span>Mobile Programming</span>
+              <span>Business Intelligence</span>
+              <span>Information Systems Audit</span>
+              <span>Software Quality Assurance</span>
+              <span>Database Systems</span>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- EXPERIENCE SECTION: Organisasi, Sertifikasi & Kompetensi -->
-    <section class="section experience-section" id="experience">
-      <div class="section-heading reveal">
-        <p class="eyebrow">02 / EXPERIENCE & CREDENTIALS</p>
-        <h2>My journey & <em>achievements.</em></h2>
-        <p class="section-intro">Organizational leadership, certifications, and academic milestones.</p>
-      </div>
-
-      <div class="timeline">
-        <!-- Organization -->
-        <article class="timeline-item reveal">
-          <div class="timeline-date">FEB 2026 — PRESENT</div>
-          <div class="timeline-content">
-            <span class="timeline-type">ORGANIZATION (HMTI)</span>
-            <h3>Head of Entrepreneurship Staff</h3>
-            <p>Himpunan Mahasiswa Teknologi Informasi (HMTI) — Polinema[cite: 5]</p>
-            <p class="muted">Managing internal business initiatives, product sales, vendor partnerships, commission structures, and departmental merchandise to support organizational sustainability[cite: 5].</p>
-          </div>
-          <span class="timeline-mark">✳</span>
-        </article>
-
-        <!-- Certifications & Achievements -->
-        <article class="timeline-item reveal">
-          <div class="timeline-date">2025</div>
-          <div class="timeline-content">
-            <span class="timeline-type">CERTIFICATION & COMPETITION</span>
-            <h3>NVIDIA Certificate & 2nd Place Business IT</h3>
-            <p>Building LLM Applications With Prompt Engineering & Waste2Worth Project[cite: 4, 5]</p>
-            <p class="muted">Awarded 2nd Place in the Polinema Internal Business IT Competition (Waste2Worth) and certified in prompt engineering by NVIDIA[cite: 4, 5].</p>
-          </div>
-          <span class="timeline-mark">✳</span>
-        </article>
-
-        <!-- Education -->
-        <article class="timeline-item reveal">
-          <div class="timeline-date">AUG 2024 — PRESENT</div>
-          <div class="timeline-content">
-            <span class="timeline-type">EDUCATION</span>
-            <h3>Politeknik Negeri Malang</h3>
-            <p>Business Information System | IT Department (GPA 3.70 / 4.00)[cite: 4]</p>
-            <p class="muted">Relevant Coursework: Advanced Web Programming, Mobile Programming, Business Intelligence, Information Systems Audit.</p>
-          </div>
-          <span class="timeline-mark">✳</span>
-        </article>
-      </div>
-    </section>
-
-    <!-- PROJECTS SECTION: Project PBL dengan Deskripsi & Visual -->
+    <!-- =======================================================================
+         02 / PROJECTS SECTION: PBL & Practical Engineering
+         ======================================================================= -->
     <section class="section projects-section" id="projects">
-      <div class="section-heading projects-heading reveal">
-        <div>
-          <p class="eyebrow">03 / PROJECT-BASED LEARNING (PBL)</p>
-          <h2>Things I've <em>built.</em></h2>
+      <div class="projects-header-flex reveal">
+        <div class="section-heading" style="margin-bottom: 0;">
+          <p class="eyebrow"><span class="eyebrow-dot"></span> 02 / SELECTED WORK</p>
+          <h2>Project-based <em>solutions.</em></h2>
+          <p class="section-intro">
+            Interactive software developed through academic project-based learning and competitions, highlighting end-to-end functionality.
+          </p>
         </div>
-        <p class="section-intro">Selected application development projects highlighting practical execution.</p>
       </div>
 
-      <div class="project-grid">
-        <!-- PROJECT 1: OutGear Station -->
-        <article class="project-card project-featured reveal">
-          <div class="project-visual visual-outgear">
-            <img src="assets/images/outgear.jpg" alt="OutGear Station Preview" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
-            <div class="visual-placeholder"><span>OUTGEAR<br>STATION</span><small>Add outgear.jpg</small></div>
-            <span class="project-number">01</span>
-          </div>
-          <div class="project-info">
-            <div>
-              <span class="project-category">WEB APPLICATION & POS</span>
-              <h3>OutGear Station</h3>
-              <p>Outdoor equipment rental information system equipped with integrated Point of Sale (POS) and inventory management features[cite: 4].</p>
+      <!-- Category Filter Tabs -->
+      <div class="project-filter-tabs reveal">
+        <button class="filter-btn active" data-filter="all" type="button">All Projects (4)</button>
+        <button class="filter-btn" data-filter="web" type="button">Web Applications (Laravel)</button>
+        <button class="filter-btn" data-filter="mobile" type="button">Mobile Application (Flutter)</button>
+        <button class="filter-btn" data-filter="competition" type="button">Business IT Innovation</button>
+      </div>
+
+      <div class="projects-grid">
+        <!-- PROJECT 1: OutGear Station (Featured) -->
+        <article class="project-card featured reveal" data-category="web">
+          <div class="project-visual-wrapper">
+            <span class="project-num-badge">01 // FEATURED</span>
+            <span class="project-type-badge">Web &amp; POS System</span>
+            
+            <!-- High-Fidelity UI Mockup -->
+            <div class="mockup-canvas">
+              <div class="mockup-header-bar">
+                <span class="mockup-dot"></span>
+                <span class="mockup-dot"></span>
+                <span class="mockup-dot"></span>
+                <div class="mockup-url-pill">outgear-station.local/rentals/pos</div>
+              </div>
+              <div class="mockup-body">
+                <div class="mockup-pos-grid">
+                  <div class="mockup-card-slot">
+                    <div class="mockup-line title"></div>
+                    <div class="mockup-line"></div>
+                    <div class="mockup-line short"></div>
+                    <div style="display: flex; gap: 6px; margin-top: 6px;">
+                      <span style="background: #E8F5E9; color: #2E7D32; font-size: 0.62rem; font-weight: 700; padding: 2px 6px; border-radius: 4px;">In Stock</span>
+                      <span style="background: #F8F4EC; color: #743D45; font-size: 0.62rem; font-weight: 700; padding: 2px 6px; border-radius: 4px;">Camping Gear</span>
+                    </div>
+                  </div>
+                  <div class="mockup-card-slot" style="background: #FAF7F0;">
+                    <div style="font-size: 0.65rem; font-weight: 700; color: #743D45; margin-bottom: 4px;">POS Summary</div>
+                    <div class="mockup-line" style="height: 4px;"></div>
+                    <div class="mockup-line" style="height: 4px; width: 60%;"></div>
+                    <div style="margin-top: auto; font-size: 0.7rem; font-weight: 800; color: #2F1E22;">Rp 350.000</div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <a href="https://github.com/fael83/Pbl-Smt5_Outgear-Station" target="_blank" rel="noopener noreferrer" class="project-repo-link" title="View Repository">
-              <span class="project-arrow">↗</span>
-            </a>
           </div>
-          <div class="tech-tags">
-            <span><i class="devicon-laravel-original"></i> Laravel</span>
-            <span><i class="devicon-php-plain"></i> PHP</span>
-            <span><i class="devicon-mysql-plain"></i> MySQL</span>
+
+          <div class="project-content">
+            <div>
+              <div class="project-role-tag">Academic PBL Semester 5 • Frontend &amp; Backend Integration</div>
+              <h3>OutGear Station – Outdoor Equipment Rental &amp; POS</h3>
+              <p>
+                A comprehensive web application designed for outdoor gear rental enterprises. Combines a public customer reservation catalog 
+                with an integrated back-office <strong>Point of Sale (POS)</strong> system for store cashiers, preventing double-bookings 
+                and automating inventory tracking.
+              </p>
+              <ul class="project-key-points">
+                <li>Integrated Point of Sale (POS) module with automatic rental period pricing calculations.</li>
+                <li>Real-time inventory deduction and item return inspection tracking.</li>
+                <li>Multi-tier access control for Customers, Cashier, and Store Administrator.</li>
+              </ul>
+            </div>
+
+            <div>
+              <div class="tech-tag-group">
+                <span><i class="devicon-laravel-original colored"></i> Laravel</span>
+                <span><i class="devicon-php-plain colored"></i> PHP</span>
+                <span><i class="devicon-mysql-plain colored"></i> MySQL</span>
+                <span><i class="devicon-javascript-plain colored"></i> JavaScript</span>
+                <span><i class="devicon-bootstrap-plain colored"></i> Bootstrap</span>
+              </div>
+              <div class="project-actions">
+                <button class="btn-card-primary open-project-modal" data-project="outgear" type="button">Project Details ↗</button>
+                <a href="https://github.com/fael83/Pbl-Smt5_Outgear-Station" target="_blank" rel="noopener noreferrer" class="btn-card-outline">
+                  <i class="devicon-github-original"></i> GitHub Repo ↗
+                </a>
+              </div>
+            </div>
           </div>
         </article>
 
-        <!-- PROJECT 2: EasyLive -->
-        <article class="project-card reveal">
-          <div class="project-visual visual-easylive">
-            <img src="assets/images/easylive.jpg" alt="EasyLive Preview" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
-            <div class="visual-placeholder"><span>EASY<br>LIVE</span><small>Add easylive.jpg</small></div>
-            <span class="project-number">02</span>
-          </div>
-          <div class="project-info">
-            <div>
-              <span class="project-category">MOBILE APPLICATION</span>
-              <h3>EasyLive</h3>
-              <p>Integrated mobile application combining boarding house rentals and relocation moving services built using Flutter[cite: 4].</p>
+        <!-- PROJECT 2: EasyLive Mobile App -->
+        <article class="project-card reveal" data-category="mobile">
+          <div class="project-visual-wrapper">
+            <span class="project-num-badge">02</span>
+            <span class="project-type-badge">Mobile App</span>
+
+            <!-- Mobile UI Mockup -->
+            <div class="mockup-phone-frame">
+              <div class="mockup-phone-notch"></div>
+              <div style="display: flex; justify-content: space-between; align-items: center; padding: 2px 4px;">
+                <span style="font-size: 0.6rem; font-weight: 700; color: #743D45;">EasyLive</span>
+                <span style="font-size: 0.6rem; color: #6F8265;">📍 Malang</span>
+              </div>
+              <div style="background: #F1ECE3; border-radius: 8px; padding: 8px; height: 100px; display: flex; flex-direction: column; justify-content: space-between;">
+                <div style="font-size: 0.62rem; font-weight: 700; color: #2F1E22;">Boarding House &amp; Moving</div>
+                <div style="background: #743D45; color: #FAF7F0; font-size: 0.55rem; font-weight: 700; padding: 3px 6px; border-radius: 4px; text-align: center;">Book Relocation</div>
+              </div>
+              <div style="background: #FFFFFF; border: 1px solid #E0D7C9; border-radius: 6px; padding: 6px;">
+                <div class="mockup-line title" style="width: 80%; height: 5px;"></div>
+                <div class="mockup-line" style="width: 50%; height: 4px; margin-top: 4px;"></div>
+              </div>
             </div>
-            <a href="https://github.com/alyfazeha/EasyLive_PBLKelompok1Semester4" target="_blank" rel="noopener noreferrer" class="project-repo-link" title="View Repository">
-              <span class="project-arrow">↗</span>
-            </a>
           </div>
-          <div class="tech-tags">
-            <span><i class="devicon-flutter-plain"></i> Flutter</span>
-            <span><i class="devicon-dart-plain"></i> Dart</span>
-            <span>REST API</span>
+
+          <div class="project-content">
+            <div>
+              <div class="project-role-tag">Academic PBL Semester 4 • Frontend Mobile Developer</div>
+              <h3>EasyLive – Boarding House &amp; Relocation App</h3>
+              <p>
+                An integrated Flutter mobile application addressing the common hassle faced by college students in finding accommodations. 
+                Combines boarding house (kost) search and booking with on-demand moving and relocation logistics.
+              </p>
+              <ul class="project-key-points">
+                <li>Search &amp; filter accommodation listings by amenities, price range, and distance.</li>
+                <li>Integrated relocation moving service booking and vehicle scheduling.</li>
+                <li>Fluid cross-platform UI engineered with Flutter state management.</li>
+              </ul>
+            </div>
+
+            <div>
+              <div class="tech-tag-group">
+                <span><i class="devicon-flutter-plain colored"></i> Flutter</span>
+                <span><i class="devicon-dart-plain colored"></i> Dart</span>
+                <span>REST API</span>
+                <span>UI/UX Design</span>
+              </div>
+              <div class="project-actions">
+                <button class="btn-card-primary open-project-modal" data-project="easylive" type="button">Project Details ↗</button>
+                <a href="https://github.com/alyfazeha/EasyLive_PBLKelompok1Semester4" target="_blank" rel="noopener noreferrer" class="btn-card-outline">
+                  <i class="devicon-github-original"></i> GitHub Repo ↗
+                </a>
+              </div>
+            </div>
           </div>
         </article>
 
         <!-- PROJECT 3: Lab Information System -->
-        <article class="project-card reveal">
-          <div class="project-visual visual-pos">
-            <img src="assets/images/simple-pos.jpg" alt="Lab Information System Preview" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
-            <div class="visual-placeholder"><span>SE LAB<br>SYSTEM</span><small>Add simple-pos.jpg</small></div>
-            <span class="project-number">03</span>
-          </div>
-          <div class="project-info">
-            <div>
-              <span class="project-category">WEB APPLICATION</span>
-              <h3>Software Engineering Lab System</h3>
-              <p>Web-based laboratory information system designed to support laboratory data management and administrative workflows[cite: 4].</p>
+        <article class="project-card reveal" data-category="web">
+          <div class="project-visual-wrapper">
+            <span class="project-num-badge">03</span>
+            <span class="project-type-badge">Web Application</span>
+
+            <!-- Web Admin Mockup -->
+            <div class="mockup-canvas">
+              <div class="mockup-header-bar">
+                <span class="mockup-dot"></span>
+                <span class="mockup-dot"></span>
+                <span class="mockup-dot"></span>
+                <div class="mockup-url-pill">se-lab.polinema.ac.id/admin/inventory</div>
+              </div>
+              <div class="mockup-body" style="padding: 12px;">
+                <div style="display: flex; gap: 8px; margin-bottom: 8px;">
+                  <div style="background: #EBF0E8; padding: 4px 8px; border-radius: 4px; font-size: 0.6rem; font-weight: 700; color: #6F8265;">Lab Devices: 42 Active</div>
+                  <div style="background: #F8F4EC; padding: 4px 8px; border-radius: 4px; font-size: 0.6rem; font-weight: 700; color: #743D45;">Sessions: 6 Today</div>
+                </div>
+                <div class="mockup-line title" style="width: 90%;"></div>
+                <div class="mockup-line" style="margin-top: 6px;"></div>
+                <div class="mockup-line" style="margin-top: 6px; width: 75%;"></div>
+              </div>
             </div>
-            <a href="https://github.com/Ailsasahda13/pwl-pos-244107060006" target="_blank" rel="noopener noreferrer" class="project-repo-link" title="View Repository">
-              <span class="project-arrow">↗</span>
-            </a>
           </div>
-          <div class="tech-tags">
-            <span><i class="devicon-laravel-original"></i> Laravel</span>
-            <span><i class="devicon-javascript-plain"></i> JS</span>
-            <span><i class="devicon-mysql-plain"></i> MySQL</span>
+
+          <div class="project-content">
+            <div>
+              <div class="project-role-tag">Academic Course Project • Full-Stack Contributor</div>
+              <h3>Software Engineering Lab System</h3>
+              <p>
+                A web-based institutional management system designed to support laboratory operations for the Software Engineering Department, 
+                streamlining hardware asset tracking, schedule bookings, and administrative record-keeping.
+              </p>
+              <ul class="project-key-points">
+                <li>Equipment inventory database with status tracking and maintenance logs.</li>
+                <li>Practicum schedule booking and laboratory assistant coordination.</li>
+                <li>Administrative paperwork and reporting automation replacing manual paper logs.</li>
+              </ul>
+            </div>
+
+            <div>
+              <div class="tech-tag-group">
+                <span><i class="devicon-laravel-original colored"></i> Laravel</span>
+                <span><i class="devicon-php-plain colored"></i> PHP</span>
+                <span><i class="devicon-mysql-plain colored"></i> MySQL</span>
+                <span><i class="devicon-javascript-plain colored"></i> JavaScript</span>
+              </div>
+              <div class="project-actions">
+                <button class="btn-card-primary open-project-modal" data-project="labsys" type="button">Project Details ↗</button>
+                <a href="https://github.com/Ailsasahda13/pwl-pos-244107060006" target="_blank" rel="noopener noreferrer" class="btn-card-outline">
+                  <i class="devicon-github-original"></i> GitHub Repo ↗
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- PROJECT 4: Waste2Worth (Competition Winner) -->
+        <article class="project-card reveal" data-category="competition">
+          <div class="project-visual-wrapper" style="background: linear-gradient(135deg, #FFF3E0 0%, #FFE082 100%);">
+            <span class="project-num-badge">04</span>
+            <span class="project-type-badge" style="background-color: #E65100;">🏆 2nd Place Winner</span>
+
+            <!-- Innovation Concept Mockup -->
+            <div class="mockup-canvas" style="border-color: rgba(230,81,0,0.2);">
+              <div class="mockup-header-bar" style="background: #FFE0B2;">
+                <span class="mockup-dot"></span>
+                <span class="mockup-dot"></span>
+                <span class="mockup-dot"></span>
+                <div class="mockup-url-pill">waste2worth.solution/architecture</div>
+              </div>
+              <div class="mockup-body" style="padding: 14px;">
+                <div style="font-size: 0.7rem; font-weight: 800; color: #E65100; margin-bottom: 6px;">Smart Segregation &amp; Token Economy</div>
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; text-align: center;">
+                  <div style="background: #FFFFFF; border-radius: 4px; padding: 6px; font-size: 0.55rem; font-weight: 700;">Sensor Ingest</div>
+                  <div style="background: #FFFFFF; border-radius: 4px; padding: 6px; font-size: 0.55rem; font-weight: 700;">AI Classify</div>
+                  <div style="background: #FFFFFF; border-radius: 4px; padding: 6px; font-size: 0.55rem; font-weight: 700;">Reward Coin</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-content">
+            <div>
+              <div class="project-role-tag">Polinema Internal Competition 2025 • System Concept &amp; Feasibility</div>
+              <h3>Waste2Worth – Smart Waste &amp; Circular Economy</h3>
+              <p>
+                Awarded <strong>2nd Place in the Business IT Category</strong>. Conceptualized an automated, sensor-driven waste segregation 
+                collection framework integrated with a circular economy tokenization model to motivate community participation in waste sorting.
+              </p>
+              <ul class="project-key-points">
+                <li>Automated sensor classification architecture for sorting municipal waste at source.</li>
+                <li>Tokenized incentive structure connecting citizens with sustainable recycling partners.</li>
+                <li>Holistic business model canvas, process flow diagrams, and economic feasibility study.</li>
+              </ul>
+            </div>
+
+            <div>
+              <div class="tech-tag-group">
+                <span>Business IT</span>
+                <span>System Architecture</span>
+                <span>IoT Concept</span>
+                <span>Circular Economy</span>
+              </div>
+              <div class="project-actions">
+                <button class="btn-card-primary open-project-modal" data-project="waste2worth" type="button">Project Details ↗</button>
+                <a href="https://github.com/Ailsasahda13" target="_blank" rel="noopener noreferrer" class="btn-card-outline">
+                  <i class="devicon-github-original"></i> Profile ↗
+                </a>
+              </div>
+            </div>
           </div>
         </article>
       </div>
     </section>
 
-    <!-- SKILLS SECTION -->
-    <section class="section skills-section" id="skills">
+    <!-- =======================================================================
+         03 / LEADERSHIP & EXPERIENCE SECTION: HMTI Polinema
+         ======================================================================= -->
+    <section class="section experience-section" id="experience">
       <div class="section-heading reveal">
-        <p class="eyebrow">04 / TECHNICAL SKILLS</p>
-        <h2>Tools in my <em>toolbox.</em></h2>
+        <p class="eyebrow"><span class="eyebrow-dot"></span> 03 / LEADERSHIP &amp; ORGANIZATIONAL IMPACT</p>
+        <h2>Demonstrated leadership <em>in action.</em></h2>
+        <p class="section-intro">
+          Active contributions in departmental governance, finance management, and campus entrepreneurship at Politeknik Negeri Malang.
+        </p>
       </div>
-      <div class="skills-layout">
-        <p class="skills-lead reveal">Frameworks, languages, and development tools I utilize.</p>
-        
-        <div class="skill-list reveal">
-          <span><i class="devicon-laravel-original colored"></i> Laravel</span>
-          <span><i class="devicon-php-plain colored"></i> PHP</span>
-          <span><i class="devicon-flutter-plain colored"></i> Flutter</span>
-          <span><i class="devicon-dart-plain colored"></i> Dart</span>
-          <span><i class="devicon-html5-plain colored"></i> HTML5</span>
-          <span><i class="devicon-css3-plain colored"></i> CSS3</span>
-          <span><i class="devicon-javascript-plain colored"></i> JavaScript</span>
-          <span><i class="devicon-mysql-plain colored"></i> MySQL</span>
-          <span><i class="devicon-git-plain colored"></i> Git</span>
-          <span><i class="devicon-github-original colored"></i> GitHub</span>
-          <span><i class="devicon-vscode-plain colored"></i> VS Code</span>
-          <span><i class="devicon-figma-plain colored"></i> Power BI</span>
+
+      <div class="timeline-container reveal">
+        <!-- ROLE 1: Head of Entrepreneurship Staff (Current) -->
+        <div class="timeline-card">
+          <div class="timeline-node current"></div>
+          <div class="timeline-inner-card">
+            <div class="timeline-badge-row">
+              <span class="timeline-date-pill">FEB 2026 — PRESENT</span>
+              <span class="timeline-type-pill">LEADERSHIP • CURRENT ROLE</span>
+            </div>
+            <h3>Head of Entrepreneurship Staff</h3>
+            <div class="timeline-org">Himpunan Mahasiswa Teknologi Informasi (HMTI) — Steering Committee Internal Dept</div>
+            <ul class="timeline-bullets">
+              <li>Lead internal entrepreneurship operations through student commercial booths, empowering IT students with avenues to market and monetize their products.</li>
+              <li>Coordinate product partnerships with student vendors, designing sales arrangements, inventory handling, and fair commission structures.</li>
+              <li>Supervise production and distribution of official organizational merchandise and departmental attire, driving revenue streams for HMTI's financial sustainability.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- ROLE 2: Organizing Committee & Treasurer -->
+        <div class="timeline-card">
+          <div class="timeline-node"></div>
+          <div class="timeline-inner-card">
+            <div class="timeline-badge-row">
+              <span class="timeline-date-pill">MARCH 2025 — FEBRUARY 2026</span>
+              <span class="timeline-type-pill">COMMITTEE &amp; FINANCIAL MANAGEMENT</span>
+            </div>
+            <h3>Organizing Committee Member &amp; Department Treasurer</h3>
+            <div class="timeline-org">Himpunan Mahasiswa Teknologi Informasi (HMTI) — Research, Interests, &amp; Talent Dept</div>
+            <ul class="timeline-bullets">
+              <li>Served as <strong>Treasurer of Internal Competition 2025</strong> and Department Treasurer, overseeing financial planning, budget allocations, and audited expense reports.</li>
+              <li>Actively contributed to the execution of major departmental initiatives, including National IT Seminars, Internal Student Competitions, and Information Technology Sports Festivals.</li>
+              <li>Collaborated cross-functionally across student divisions to ensure seamless event logistics, participant registration, and stakeholder accountability.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- ACADEMIC MILESTONE: Polinema -->
+        <div class="timeline-card">
+          <div class="timeline-node"></div>
+          <div class="timeline-inner-card">
+            <div class="timeline-badge-row">
+              <span class="timeline-date-pill">AUGUST 2024 — PRESENT</span>
+              <span class="timeline-type-pill">UNDERGRADUATE EDUCATION</span>
+            </div>
+            <h3>Bachelor of Applied Science (D4) in Business Information Systems</h3>
+            <div class="timeline-org">Politeknik Negeri Malang (Polinema) — Information Technology Department</div>
+            <ul class="timeline-bullets">
+              <li>Current Cumulative <strong>GPA: 3.70 / 4.00</strong> (Consistent high academic performance).</li>
+              <li>Core curriculum: Advanced Web Programming, Mobile Programming, Business Intelligence, Information Systems Audit, Software Quality Assurance (SQA), and Database Management.</li>
+              <li>Strong emphasis on Project-Based Learning (PBL) simulating enterprise software lifecycle and team workflows.</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- CONTACT SECTION: LinkedIn, GitHub, Instagram -->
-    <section class="contact-section" id="contact">
-      <div class="contact-inner reveal">
-        <p class="eyebrow">05 / GET IN TOUCH</p>
-        <h2>Let's make something<br><em>meaningful together.</em></h2>
-        <p>Seeking IT internship opportunities and collaborative tech projects.</p>
-        <a class="button button-light" href="mailto:ailsagarizah@gmail.com">Say hello <span>↗</span></a>
-        
-        <div class="contact-links">
-          <a href="https://github.com/Ailsasahda13" target="_blank" rel="noreferrer">GitHub ↗</a>
-          <a href="https://www.linkedin.com/in/ailsasahda" target="_blank" rel="noreferrer">LinkedIn ↗</a>
-          <a href="https://instagram.com/" target="_blank" rel="noreferrer">Instagram ↗</a>
-          <a href="mailto:ailsagarizah@gmail.com">Email ↗</a>
+    <!-- =======================================================================
+         04 / ACHIEVEMENTS & CERTIFICATIONS SECTION
+         ======================================================================= -->
+    <section class="section credentials-section" id="credentials">
+      <div class="section-heading reveal">
+        <p class="eyebrow"><span class="eyebrow-dot"></span> 04 / VERIFIED CREDENTIALS</p>
+        <h2>Certifications &amp; <em>accolades.</em></h2>
+        <p class="section-intro">
+          Formal credentials and external competitive recognitions verifying technical competency and innovative problem solving.
+        </p>
+      </div>
+
+      <div class="credentials-grid reveal">
+        <!-- NVIDIA CERTIFICATE -->
+        <div class="credential-card">
+          <div>
+            <div class="credential-top">
+              <div class="credential-logo-badge nvidia">
+                <strong>NV</strong>
+              </div>
+              <span class="credential-year">ISSUED NOV 2025</span>
+            </div>
+            <h3>Building LLM Applications With Prompt Engineering</h3>
+            <div class="credential-issuer">NVIDIA Deep Learning Institute — Certificate of Competency</div>
+            <p class="credential-description">
+              Demonstrated competency in prompt engineering, designing structured inputs, few-shot prompting techniques, 
+              and architecting Large Language Model (LLM) powered software applications. Signed by Greg Estes (VP, NVIDIA).
+            </p>
+          </div>
+
+          <div>
+            <div class="credential-meta-box">
+              <div>
+                <span class="detail-item-label">Credential ID:</span>
+                <div><strong>eUwsiC_ATUSGWiwKppuSPg</strong></div>
+              </div>
+              <div style="text-align: right;">
+                <span class="detail-item-label">Status:</span>
+                <div style="color: #2E7D32; font-weight: 700;">Verified ✓</div>
+              </div>
+            </div>
+            <button class="credential-action-btn open-cert-modal" type="button">
+              <span>View Official Certificate</span> ↗
+            </button>
+          </div>
+        </div>
+
+        <!-- 2ND PLACE COMPETITION -->
+        <div class="credential-card">
+          <div>
+            <div class="credential-top">
+              <div class="credential-logo-badge trophy">
+                <span>🏆</span>
+              </div>
+              <span class="credential-year">AWARDED 2025</span>
+            </div>
+            <h3>2nd Place – Business IT Category</h3>
+            <div class="credential-issuer">Internal Competition Politeknik Negeri Malang</div>
+            <p class="credential-description">
+              Awarded 2nd Place for the <strong>Waste2Worth</strong> initiative: <em>An Automated Segregated Waste Collection 
+              and Circular Economy Solution</em>. Recognized for combining IoT architecture, automated segregation sensors, 
+              and a viable circular incentive model.
+            </p>
+          </div>
+
+          <div>
+            <div class="credential-meta-box">
+              <div>
+                <span class="detail-item-label">Category:</span>
+                <div><strong>Business IT Innovation</strong></div>
+              </div>
+              <div style="text-align: right;">
+                <span class="detail-item-label">Institution:</span>
+                <div><strong>Polinema</strong></div>
+              </div>
+            </div>
+            <button class="credential-action-btn open-project-modal" data-project="waste2worth" type="button">
+              <span>Explore Winning Concept</span> ↗
+            </button>
+          </div>
         </div>
       </div>
+    </section>
+
+    <!-- =======================================================================
+         05 / SKILLS MATRIX SECTION
+         ======================================================================= -->
+    <section class="section skills-section" id="skills">
+      <div class="section-heading reveal">
+        <p class="eyebrow"><span class="eyebrow-dot"></span> 05 / TECHNICAL MATRIX</p>
+        <h2>Capabilities in my <em>toolkit.</em></h2>
+        <p class="section-intro">
+          Systematically grouped technical skills, frameworks, and methodologies developed through academic projects and certifications.
+        </p>
+      </div>
+
+      <div class="skills-matrix reveal">
+        <!-- CATEGORY 1: Web & Backend -->
+        <div class="skill-category-card">
+          <div class="skill-category-header">
+            <div class="skill-cat-icon">🌐</div>
+            <h3>Web &amp; Backend</h3>
+          </div>
+          <div class="skill-items-list">
+            <div class="skill-item">
+              <span class="skill-name"><i class="devicon-laravel-original colored"></i> Laravel</span>
+              <span class="skill-badge">Advanced</span>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name"><i class="devicon-php-plain colored"></i> PHP</span>
+              <span class="skill-badge">Proficient</span>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name"><i class="devicon-mysql-plain colored"></i> MySQL</span>
+              <span class="skill-badge">Database</span>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name"><i class="devicon-javascript-plain colored"></i> JavaScript</span>
+              <span class="skill-badge">Frontend</span>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name"><i class="devicon-html5-plain colored"></i> HTML5 &amp; CSS3</span>
+              <span class="skill-badge">Markup</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- CATEGORY 2: Mobile & UI -->
+        <div class="skill-category-card">
+          <div class="skill-category-header">
+            <div class="skill-cat-icon">📱</div>
+            <h3>Mobile &amp; UI</h3>
+          </div>
+          <div class="skill-items-list">
+            <div class="skill-item">
+              <span class="skill-name"><i class="devicon-flutter-plain colored"></i> Flutter</span>
+              <span class="skill-badge">Cross-Platform</span>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name"><i class="devicon-dart-plain colored"></i> Dart</span>
+              <span class="skill-badge">Language</span>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name"><i class="devicon-bootstrap-plain colored"></i> Bootstrap</span>
+              <span class="skill-badge">Responsive</span>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name"><span>🔌</span> RESTful API</span>
+              <span class="skill-badge">Integration</span>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name"><span>🎨</span> UI/UX Design</span>
+              <span class="skill-badge">Prototyping</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- CATEGORY 3: AI, Data & Business IT -->
+        <div class="skill-category-card">
+          <div class="skill-category-header">
+            <div class="skill-cat-icon">🧠</div>
+            <h3>AI &amp; Business IT</h3>
+          </div>
+          <div class="skill-items-list">
+            <div class="skill-item">
+              <span class="skill-name"><span>⚡</span> Prompt Engineering</span>
+              <span class="skill-badge" style="background:#E8F5E9; color:#2E7D32;">NVIDIA Cert</span>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name"><span>📊</span> Power BI</span>
+              <span class="skill-badge">BI &amp; Reports</span>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name"><span>🔍</span> Systems Audit</span>
+              <span class="skill-badge">Analysis</span>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name"><span>🧪</span> Software QA</span>
+              <span class="skill-badge">Testing</span>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name"><span>📐</span> Business Modeling</span>
+              <span class="skill-badge">Process</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- CATEGORY 4: Tools & Soft Skills -->
+        <div class="skill-category-card">
+          <div class="skill-category-header">
+            <div class="skill-cat-icon">🛠️</div>
+            <h3>Tools &amp; Leadership</h3>
+          </div>
+          <div class="skill-items-list">
+            <div class="skill-item">
+              <span class="skill-name"><i class="devicon-git-plain colored"></i> Git &amp; GitHub</span>
+              <span class="skill-badge">Version Ctrl</span>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name"><i class="devicon-vscode-plain colored"></i> VS Code</span>
+              <span class="skill-badge">Environment</span>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name"><span>👥</span> Team Leadership</span>
+              <span class="skill-badge">HMTI Lead</span>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name"><span>💰</span> Budget Management</span>
+              <span class="skill-badge">Treasurer</span>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name"><span>🗣️</span> Bilingual</span>
+              <span class="skill-badge">ID / EN</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         06 / CONTACT & FOOTER SECTION
+         ======================================================================= -->
+    <section class="contact-section" id="contact">
+      <div class="contact-card reveal">
+        <p class="eyebrow"><span class="eyebrow-dot"></span> 06 / GET IN TOUCH</p>
+        <h2>Let's build something<br><em>meaningful together.</em></h2>
+        <p>
+          I am actively seeking <strong>IT Internship opportunities</strong> and entry-level developer roles. 
+          Whether you have an upcoming project, an internship opening, or wish to review my academic qualifications, 
+          I would love to connect!
+        </p>
+
+        <div class="contact-cta-row">
+          <a class="btn-email-primary" href="mailto:ailsagarizah@gmail.com">
+            <span>Say Hello via Email</span> <span>↗</span>
+          </a>
+          <button class="btn-resume-outline open-cv-modal" type="button">
+            <span>View Full Resume</span> <span>↗</span>
+          </button>
+        </div>
+
+        <div class="contact-social-grid">
+          <a href="https://github.com/Ailsasahda13" target="_blank" rel="noopener noreferrer" class="contact-social-link">
+            GitHub (Ailsasahda13) ↗
+          </a>
+          <a href="https://www.linkedin.com/in/ailsasahda" target="_blank" rel="noopener noreferrer" class="contact-social-link">
+            LinkedIn (in/ailsasahda) ↗
+          </a>
+          <a href="mailto:ailsagarizah@gmail.com" class="contact-social-link">
+            ailsagarizah@gmail.com ↗
+          </a>
+          <span class="contact-social-link" style="border: none; opacity: 0.7;">
+            📍 Malang, East Java, Indonesia
+          </span>
+        </div>
+      </div>
+
       <footer>
         <span>© 2026 AILSA SAHDA GARIZAH</span>
-        <span>MADE WITH CURIOSITY ✳</span>
+        <span>BUSINESS INFORMATION SYSTEMS • POLITEKNIK NEGERI MALANG</span>
         <a href="#home">BACK TO TOP ↑</a>
       </footer>
     </section>
   </main>
+
+  <!-- =========================================================================
+       MODAL 1: NVIDIA CERTIFICATE VIEWER
+       ========================================================================= -->
+  <div class="modal-overlay" id="certModal" role="dialog" aria-modal="true" aria-labelledby="certModalTitle">
+    <div class="modal-container">
+      <div class="modal-header">
+        <h3 class="modal-title" id="certModalTitle">NVIDIA Certificate of Competency</h3>
+        <button class="modal-close-btn" id="closeCertModal" aria-label="Close certificate modal">✕</button>
+      </div>
+      <div class="modal-body">
+        <img class="modal-cert-image" src="assets/images/nvidia-cert.png" alt="NVIDIA Certificate of Competency - Ailsa Sahda Garizah" onerror="this.src='assets/images/Screenshot 2026-10-31 015036.png'">
+        
+        <div class="modal-details-grid">
+          <div>
+            <div class="detail-item-label">Awarded To:</div>
+            <div class="detail-item-value">Ailsa Sahda Garizah</div>
+          </div>
+          <div>
+            <div class="detail-item-label">Course Title:</div>
+            <div class="detail-item-value">Building LLM Applications With Prompt Engineering</div>
+          </div>
+          <div>
+            <div class="detail-item-label">Issue Date:</div>
+            <div class="detail-item-value">November 9, 2025</div>
+          </div>
+          <div>
+            <div class="detail-item-label">Issued By:</div>
+            <div class="detail-item-value">Greg Estes (Vice President, NVIDIA)</div>
+          </div>
+          <div style="grid-column: 1 / -1;">
+            <div class="detail-item-label">Credential Verification ID:</div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 4px;">
+              <code style="font-size: 0.88rem; background: #EFE9DE; padding: 4px 8px; border-radius: 4px; font-weight: 700; color: #4F252C;">eUwsiC_ATUSGWiwKppuSPg</code>
+              <button id="copyCredBtn" type="button" style="padding: 4px 12px; background: #743D45; color: #FFF; border-radius: 4px; font-size: 0.76rem; font-weight: 700;">Copy ID</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       MODAL 2: DYNAMIC PROJECT DETAIL MODAL
+       ========================================================================= -->
+  <div class="modal-overlay" id="projectModal" role="dialog" aria-modal="true" aria-labelledby="projectModalTitle">
+    <div class="modal-container">
+      <div class="modal-header">
+        <h3 class="modal-title" id="projectModalTitle">Project Details</h3>
+        <button class="modal-close-btn" id="closeProjectModal" aria-label="Close project modal">✕</button>
+      </div>
+      <div class="modal-body" id="projectModalBody">
+        <!-- Content dynamically injected via script.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       MODAL 3: RESUME / CV SUMMARY MODAL
+       ========================================================================= -->
+  <div class="modal-overlay" id="cvModal" role="dialog" aria-modal="true" aria-labelledby="cvModalTitle">
+    <div class="modal-container" style="max-width: 680px;">
+      <div class="modal-header">
+        <h3 class="modal-title" id="cvModalTitle">Curriculum Vitae Overview</h3>
+        <button class="modal-close-btn" id="closeCvModal" aria-label="Close resume modal">✕</button>
+      </div>
+      <div class="modal-body">
+        <div style="text-align: center; border-bottom: 1px solid rgba(116,61,69,0.14); padding-bottom: 16px; margin-bottom: 20px;">
+          <h2 style="font-size: 1.8rem; color: #4F252C;">AILSA SAHDA GARIZAH</h2>
+          <p style="font-size: 0.88rem; color: #743D45; font-weight: 700; margin-bottom: 8px;">Business Information Systems Undergraduate Student</p>
+          <div style="font-size: 0.8rem; color: #6C5B5E; display: flex; justify-content: center; flex-wrap: wrap; gap: 14px;">
+            <span>📧 ailsagarizah@gmail.com</span>
+            <span>🔗 linkedin.com/in/ailsasahda</span>
+            <span>💻 github.com/Ailsasahda13</span>
+          </div>
+        </div>
+
+        <div style="margin-bottom: 18px;">
+          <h4 style="font-size: 0.84rem; text-transform: uppercase; letter-spacing: 1px; color: #743D45; margin-bottom: 6px;">Executive Summary</h4>
+          <p style="font-size: 0.88rem; color: #3A2327; line-height: 1.6;">
+            Business Information Systems student at Politeknik Negeri Malang (GPA 3.70/4.00) with hands-on experience building web and mobile applications using Laravel, MySQL, and Flutter. Developed frontend and contributed to backend across three academic projects, including a laboratory information system and a rental platform with POS integration. 2nd place in a Business IT competition and NVIDIA-certified in Prompt Engineering. Seeking an IT internship to grow as a developer and contribute to real-world products.
+          </p>
+        </div>
+
+        <div style="margin-bottom: 18px;">
+          <h4 style="font-size: 0.84rem; text-transform: uppercase; letter-spacing: 1px; color: #743D45; margin-bottom: 6px;">Education</h4>
+          <div style="display: flex; justify-content: space-between; font-size: 0.88rem; font-weight: 700; color: #2F1E22;">
+            <span>Politeknik Negeri Malang</span>
+            <span>Aug 2024 — Present</span>
+          </div>
+          <div style="font-size: 0.82rem; color: #6F8265; font-weight: 600;">Business Information System | IT Dept (GPA: 3.70 / 4.00)</div>
+          <div style="font-size: 0.8rem; color: #6C5B5E; margin-top: 4px;">
+            Relevant Coursework: Advanced Web Programming, Mobile Programming, Business Intelligence, Systems Audit, SQA.
+          </div>
+        </div>
+
+        <div style="margin-bottom: 18px;">
+          <h4 style="font-size: 0.84rem; text-transform: uppercase; letter-spacing: 1px; color: #743D45; margin-bottom: 6px;">Key Competencies</h4>
+          <div style="font-size: 0.82rem; color: #3A2327; line-height: 1.6;">
+            <strong>Technical:</strong> Laravel, PHP, Flutter, Dart, MySQL, JavaScript, HTML, CSS, Git, GitHub, Power BI, Prompt Engineering (NVIDIA).<br>
+            <strong>Soft Skills:</strong> Leadership, Financial Accountability (Treasurer), Time Management, Adaptability, Problem Solving.<br>
+            <strong>Languages:</strong> Indonesian (Native), English (Intermediate/Upper).
+          </div>
+        </div>
+
+        <div style="display: flex; gap: 12px; padding-top: 16px; border-top: 1px solid rgba(116,61,69,0.12);">
+          <a href="mailto:ailsagarizah@gmail.com?subject=IT%20Internship%20Inquiry%20-%20Ailsa%20Sahda%20Garizah" class="btn-card-primary" style="flex: 1; text-align: center; justify-content: center;">
+            Contact via Email ✉
+          </a>
+          <button onclick="window.print()" class="btn-card-outline" type="button">
+            Print CV 🖨
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main JavaScript File -->
   <script src="js/script.js"></script>
 </body>
 </html>
