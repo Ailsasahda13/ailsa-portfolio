@@ -53,11 +53,11 @@ h1 em, h2 em { font-weight: 600; }
 .timeline-mark { font-size: 1.4rem; }
 .projects-heading { display: flex; justify-content: space-between; align-items: end; gap: 30px; }
 .projects-heading .section-intro { max-width: 300px; }
+
+/* GRID PROYEK: Diatur 2 Kolom Sejajar dan Rata */
 .project-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 45px 28px; }
 .project-card { min-width: 0; }
-.project-featured { grid-column: span 2; }
 .project-visual { height: 270px; background: var(--sage); border-radius: 16px; overflow: hidden; position: relative; }
-.project-featured .project-visual { height: 360px; }
 .project-visual img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .visual-placeholder { display: none; height: 100%; place-content: center; text-align: center; font: 800 2.7rem/.95 var(--font-display); }
 .project-number { position: absolute; top: 16px; left: 16px; background: var(--cream); border-radius: 30px; padding: 8px 12px; font-size: .7rem; font-weight: 700; }
@@ -67,6 +67,7 @@ h1 em, h2 em { font-weight: 600; }
 .project-arrow { font-size: 1.5rem; }
 .tech-tags { display: flex; flex-wrap: wrap; gap: 8px; }
 .tech-tags span { border: 1px solid rgba(116,61,69,.35); border-radius: 30px; padding: 7px 12px; font-size: .68rem; }
+
 .skills-section { background: var(--cream); }
 .skills-layout { display: grid; grid-template-columns: .8fr 1.2fr; gap: 10%; }
 .skills-lead { font: 600 1.5rem/1.4 var(--font-display); max-width: 340px; }
