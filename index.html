@@ -25,30 +25,39 @@
 
   <main>
 <!-- HERO SECTION -->
-    <section class="hero section" id="home">
-      <div class="hero-copy reveal">
-        <p class="eyebrow"><span class="eyebrow-dot"></span> Business Information Systems Undergraduate Student</p>
-        <h1>Building useful things, <em>with thoughtful details.</em></h1>
-        <p class="hero-description">Halo! Aku <strong>Ailsa Sahda Garizah</strong>, mahasiswi Sistem Informasi Bisnis di Polinema dengan IPK 3.70/4.00[cite: 4], berfokus pada pengembangan aplikasi web dan mobile serta pengelolaan sistem informasi yang solutif.</p>
-        <div class="hero-actions">
-          <a class="button button-primary" href="#projects">Explore my work <span>↘</span></a>
-          <a class="text-link" href="#about">Get to know me <span>↗</span></a>
-        </div>
-        <div class="hero-note"><span class="note-line"></span> Currently learning, creating, and growing.</div>
+<section class="hero section" id="home">
+  <div class="hero-copy reveal">
+    <p class="eyebrow"><span class="eyebrow-dot"></span> Business Information Systems Undergraduate Student</p>
+    <h1>Ailsa Sahda Garizah</h1>
+    <h2 class="hero-subtitle">Building impactful solutions, <em>through technology.</em></h2>
+    <p class="hero-description">Fifth-semester Business Information Systems undergraduate student at Politeknik Negeri Malang, with hands-on experience in web and mobile application development. Eager to contribute and grow in the tech industry.</p>
+    <div class="hero-actions">
+      <a class="button button-primary" href="#projects">Explore My Work <span>↗</span></a>
+      <a class="button button-outline" href="#about">Get to Know Me <span>↗</span></a>
+    </div>
+  </div>
+  
+  <!-- HERO ART: FOTO TEGAK LURUS DENGAN EFEK HOVER GOYANG -->
+  <div class="hero-art reveal">
+    <div class="art-frame-polaroid">
+      <div class="clean-photo-wrapper">
+        <img src="assets/images/foto ktm.jpg.jpeg" alt="Ailsa Sahda Garizah" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
+        <div class="image-placeholder"><span>AILSA<br>SAHDA</span><small>Foto Utama</small></div>
       </div>
-      
-      <!-- HERO ART: FRAME KREM DENGAN FOTO BERSIH -->
-      <div class="hero-art reveal">
-        <div class="art-frame">
-          <div class="clean-photo-wrapper">
-            <img src="assets/images/foto ktm.jpg.jpeg" alt="Foto Resmi Ailsa Sahda Garizah" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
-            <div class="image-placeholder"><span>YOUR<br>PHOTO</span><small>Tambahkan foto</small></div>
-          </div>
-        </div>
-      </div>
+      <div class="polaroid-tag">Ailsa Sahda Garizah</div>
+    </div>
+    <!-- Elemen Dekoratif Bintang & Garis Melingkar ala Referensi -->
+    <div class="deco-star star-top">✦</div>
+    <div class="deco-star star-bottom">✦</div>
+  </div>
 
-      <a class="scroll-cue" href="#about">SCROLL TO EXPLORE <span>↓</span></a>
-    </section>
+  <!-- Gelombang di Bagian Bawah Hero -->
+  <div class="hero-wave">
+    <svg viewBox="0 0 1440 120" fill="none" preserveAspectRatio="none">
+      <path d="M0,32L60,42.7C120,53,240,75,360,80C480,85,600,75,720,64C840,53,960,43,1080,48C1200,53,1320,75,1380,85.3L1440,96L1440,120L1380,120C1320,120,1200,120,1080,120C960,120,840,120,720,120C600,120,480,120,360,120C240,120,120,120,60,120L0,120Z" fill="#F6F1E7"></path>
+    </svg>
+  </div>
+</section>
 
 <!-- ABOUT SECTION -->
 <section class="section about-section" id="about">
@@ -141,7 +150,7 @@
       </div>
       <div class="project-grid">
         
-        <!-- PROYEK 1: OutGear Station -->
+        <!-- PROYEK 1: OutGear Station (Kelas project-featured sudah dihapus agar setara) -->
         <article class="project-card reveal">
           <div class="project-visual visual-outgear">
             <img src="assets/images/outgear.jpg" alt="Preview proyek OutGear Station" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
@@ -150,7 +159,7 @@
           </div>
           <div class="project-info">
             <div>
-              <span class="project-category">WEB APPLICATION & POS</span>
+              <span class="project-category">WEB APPLICATION</span>
               <h3>OutGear Station</h3>
               <p>Sistem informasi persewaan alat outdoor berbasis web dengan integrasi POS[cite: 4].</p>
             </div>
@@ -158,7 +167,7 @@
               <span class="project-arrow">↗</span>
             </a>
           </div>
-          <div class="tech-tags"><span>Laravel</span><span>PHP</span><span>MySQL</span><span>JavaScript</span></div>
+          <div class="tech-tags"><span>Laravel</span><span>MySQL</span><span>POS Integration</span></div>
         </article>
 
         <!-- PROYEK 2: EasyLive -->
@@ -170,7 +179,7 @@
           </div>
           <div class="project-info">
             <div>
-              <span class="project-category">MOBILE APPLICATION DEVELOPMENT</span>
+              <span class="project-category">MOBILE APPLICATION</span>
               <h3>EasyLive</h3>
               <p>Aplikasi mobile terintegrasi untuk penyewaan kos dan layanan pindahan[cite: 4].</p>
             </div>
@@ -178,27 +187,27 @@
               <span class="project-arrow">↗</span>
             </a>
           </div>
-          <div class="tech-tags"><span>Flutter</span><span>Dart</span><span>REST API</span></div>
+          <div class="tech-tags"><span>Flutter</span><span>MVC</span><span>REST API</span></div>
         </article>
 
-        <!-- PROYEK 3: SE Lab System -->
+        <!-- PROYEK 3: Simple POS -->
         <article class="project-card reveal">
           <div class="project-visual visual-pos">
-            <img src="assets/images/simple-pos.jpg" alt="Preview proyek SE Lab System" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
-            <div class="visual-placeholder"><span>SE LAB<br>SYSTEM</span><small>Tambahkan gambar</small></div>
+            <img src="assets/images/simple-pos.jpg" alt="Preview proyek Simple POS" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
+            <div class="visual-placeholder"><span>SIMPLE<br>POS</span><small>Tambahkan simple-pos.jpg</small></div>
             <span class="project-number">03</span>
           </div>
           <div class="project-info">
             <div>
-              <span class="project-category">WEB APPLICATION DEVELOPMENT</span>
-              <h3>Software Engineering Laboratory Information System</h3>
-              <p>Sistem informasi laboratorium rekayasa perangkat lunak berbasis web[cite: 4].</p>
+              <span class="project-category">WEB APPLICATION</span>
+              <h3>Simple POS</h3>
+              <p>Aplikasi point of sale berbasis Laravel untuk manajemen produk dan transaksi[cite: 4].</p>
             </div>
-            <a href="https://github.com/Ailsasahda13" target="_blank" rel="noopener noreferrer" class="project-repo-link" title="View GitHub Repository">
+            <a href="https://github.com/Ailsasahda13/pwl-pos-244107060006" target="_blank" rel="noopener noreferrer" class="project-repo-link" title="View GitHub Repository">
               <span class="project-arrow">↗</span>
             </a>
           </div>
-          <div class="tech-tags"><span>Laravel</span><span>JS</span><span>MySQL</span></div>
+          <div class="tech-tags"><span>Laravel</span><span>PHP</span><span>MySQL</span></div>
         </article>
 
       </div>

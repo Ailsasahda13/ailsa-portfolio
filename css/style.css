@@ -18,24 +18,115 @@ a { color: inherit; text-decoration: none; }
 .nav-links .nav-contact { background: var(--wine); color: var(--cream); padding: 12px 18px; border-radius: 30px; }
 .menu-toggle { display: none; border: 0; background: none; color: var(--wine); font-size: 1.5rem; }
 .section { padding: 105px 9%; }
-.hero { min-height: 690px; display: grid; grid-template-columns: 1.08fr .92fr; align-items: center; gap: 7%; position: relative; padding-top: 85px; background: var(--sage); color: var(--wine); overflow: hidden; }
+
+/* HERO SECTION - Disesuaikan dengan Gelombang, Subjudul Italic, & Efek Goyang */
+.hero { 
+  min-height: 720px; 
+  display: grid; 
+  grid-template-columns: 1.1fr 0.9fr; 
+  align-items: center; 
+  gap: 5%; 
+  position: relative; 
+  padding-top: 60px; 
+  padding-bottom: 140px; 
+  background: var(--sage); 
+  color: var(--wine); 
+  overflow: hidden; 
+}
 .eyebrow { font-size: .7rem; letter-spacing: 2px; font-weight: 700; margin: 0 0 22px; }
 .eyebrow-dot { width: 8px; height: 8px; display: inline-block; background: var(--wine); border-radius: 50%; margin-right: 8px; }
 h1, h2, h3, p { margin-top: 0; }
 h1, h2 { font-family: var(--font-display); letter-spacing: -1.8px; }
-h1 { font-size: clamp(3.3rem, 6.1vw, 6rem); line-height: .99; margin-bottom: 26px; max-width: 680px; }
+.hero h1 { 
+  font-size: clamp(2.8rem, 5vw, 4.8rem); 
+  line-height: 1.05; 
+  margin-bottom: 12px; 
+  font-weight: 800;
+}
+.hero-subtitle {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  font-weight: 600;
+  font-style: italic;
+  line-height: 1.2;
+  margin-bottom: 22px;
+  color: var(--wine);
+}
+.hero-subtitle em { font-style: italic; }
 h1 em, h2 em { font-weight: 600; }
 .hero-description { max-width: 510px; line-height: 1.85; font-size: .98rem; }
 .hero-actions { display: flex; align-items: center; gap: 26px; margin-top: 32px; }
 .button { display: inline-flex; gap: 20px; align-items: center; border-radius: 40px; padding: 15px 21px; font-size: .85rem; font-weight: 700; transition: transform .2s; }
 .button:hover { transform: translateY(-3px); }
 .button-primary { background: var(--wine); color: var(--cream); }
+.button-outline { background: transparent; color: var(--wine); border: 1.5px solid var(--wine); }
+.button-outline:hover { background: var(--wine); color: var(--cream); }
 .text-link { font-size: .85rem; font-weight: 700; border-bottom: 1px solid var(--wine); padding-bottom: 5px; }
-.hero-note { margin-top: 65px; display: flex; align-items: center; gap: 12px; font-size: .76rem; }
-.note-line { width: 35px; height: 1px; background: var(--wine); }
-.hero-art { position: relative; max-width: 450px; width: 100%; justify-self: center; }
-.art-frame { background: var(--cream); padding: 16px; border-radius: 170px 170px 24px 24px; box-shadow: 18px 20px 0 rgba(116,61,69,.12); transform: rotate(2deg); }
-.scroll-cue { position: absolute; bottom: 28px; left: 9%; font-size: .65rem; font-weight: 700; letter-spacing: 1.5px; }
+
+/* Bingkai Polaroid Tegak Lurus & Efek Goyang (Wobble Hover) */
+.hero-art { 
+  position: relative; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+}
+.art-frame-polaroid {
+  background-color: #F8F3EA;
+  padding: 16px 16px 45px 16px;
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(58, 35, 39, 0.15);
+  border: 1px solid rgba(124, 58, 68, 0.15);
+  position: relative;
+  transform: rotate(0deg);
+  transition: transform 0.3s ease-in-out;
+}
+.art-frame-polaroid:hover {
+  animation: wobbleHover 0.6s ease-in-out infinite alternate;
+}
+@keyframes wobbleHover {
+  0% { transform: rotate(0deg) translateX(0); }
+  25% { transform: rotate(3deg) translateX(4px); }
+  75% { transform: rotate(-3deg) translateX(-4px); }
+  100% { transform: rotate(0deg) translateX(0); }
+}
+.clean-photo-wrapper { 
+  width: 280px; 
+  height: 350px; 
+  border-radius: 6px; 
+  overflow: hidden; 
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1); 
+  background-color: #7C3A44; 
+  position: relative; 
+}
+.clean-photo-wrapper img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
+.polaroid-tag {
+  position: absolute;
+  bottom: 14px;
+  right: 18px;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--wine);
+}
+
+/* Gelombang Bawah Hero */
+.hero-wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  line-height: 0;
+  z-index: 5;
+}
+.hero-wave svg {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 70px;
+}
+
+.scroll-cue { position: absolute; bottom: 28px; left: 9%; font-size: .65rem; font-weight: 700; letter-spacing: 1.5px; z-index: 10; }
 .scroll-cue span { margin-left: 12px; font-size: 1rem; }
 .section-heading { margin-bottom: 55px; }
 .section-heading h2 { font-size: clamp(2.6rem, 4.5vw, 4.3rem); line-height: 1.05; margin-bottom: 15px; }
@@ -54,10 +145,16 @@ h1 em, h2 em { font-weight: 600; }
 .projects-heading { display: flex; justify-content: space-between; align-items: end; gap: 30px; }
 .projects-heading .section-intro { max-width: 300px; }
 
-/* GRID PROYEK: Diatur 2 Kolom Sejajar dan Rata */
-.project-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 45px 28px; }
+/* 3 KOLOM SEJAJAR */
+.project-grid { 
+  display: grid; 
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 30px 24px; 
+}
 .project-card { min-width: 0; }
+.project-featured { grid-column: span 2; }
 .project-visual { height: 270px; background: var(--sage); border-radius: 16px; overflow: hidden; position: relative; }
+.project-featured .project-visual { height: 360px; }
 .project-visual img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .visual-placeholder { display: none; height: 100%; place-content: center; text-align: center; font: 800 2.7rem/.95 var(--font-display); }
 .project-number { position: absolute; top: 16px; left: 16px; background: var(--cream); border-radius: 30px; padding: 8px 12px; font-size: .7rem; font-weight: 700; }
@@ -67,7 +164,6 @@ h1 em, h2 em { font-weight: 600; }
 .project-arrow { font-size: 1.5rem; }
 .tech-tags { display: flex; flex-wrap: wrap; gap: 8px; }
 .tech-tags span { border: 1px solid rgba(116,61,69,.35); border-radius: 30px; padding: 7px 12px; font-size: .68rem; }
-
 .skills-section { background: var(--cream); }
 .skills-layout { display: grid; grid-template-columns: .8fr 1.2fr; gap: 10%; }
 .skills-lead { font: 600 1.5rem/1.4 var(--font-display); max-width: 340px; }
@@ -86,7 +182,7 @@ footer { border-top: 1px solid rgba(246,241,231,.3); padding-top: 22px; display:
 .reveal { opacity: 0; transform: translateY(22px); transition: opacity .7s ease, transform .7s ease; }
 .reveal.visible { opacity: 1; transform: translateY(0); }
 
-/* Custom About Card & Polaroid */
+/* Custom About Card */
 .about-card-container { background-color: #F8F3EA !important; border: 1px solid rgba(124, 58, 68, 0.15); border-radius: 28px; padding: 48px; display: grid !important; grid-template-columns: 1fr 1.2fr !important; gap: 40px; box-shadow: 0 10px 30px rgba(124, 58, 68, 0.04); margin-top: 24px; }
 .about-left-col { display: flex; flex-direction: column; justify-content: space-between; gap: 32px; border-right: 1px solid rgba(124, 58, 68, 0.12); padding-right: 40px; }
 .quote-badge { background-color: #7C3A44; color: #F8F3EA; padding: 24px; border-radius: 20px; }
@@ -102,9 +198,6 @@ footer { border-top: 1px solid rgba(246,241,231,.3); padding-top: 22px; display:
 .social-btn:hover { background-color: #7C3A44; color: #F8F3EA; border-color: #7C3A44; }
 .social-btn-accent { background-color: #7C3A44; color: #F8F3EA; border-color: #7C3A44; }
 .social-btn-accent:hover { background-color: #3A2327; }
-.hero-art .art-frame { position: relative; background-color: #F8F3EA !important; padding: 10px !important; border-radius: 24px !important; box-shadow: 0 16px 36px rgba(58, 35, 39, 0.12) !important; border: 1px solid rgba(124, 58, 68, 0.15) !important; display: flex !important; justify-content: center !important; align-items: center !important; }
-.clean-photo-wrapper { width: 280px; height: 350px; border-radius: 16px; overflow: hidden; box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1); background-color: #7C3A44; position: relative; }
-.clean-photo-wrapper img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
 
 @media (max-width: 868px) {
   .about-card-container { grid-template-columns: 1fr !important; padding: 32px 24px; }
