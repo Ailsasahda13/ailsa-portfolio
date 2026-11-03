@@ -2,8 +2,8 @@ Simpan semua gambar/foto portofolio di folder ini.
 
 Nama file yang dipakai oleh template:
 - profile.jpg     : foto profil
-- outgear.jpg     : screenshot proyek OutGear Station
-- easylive.jpg    : screenshot proyek EasyLive
+- outgear.png     : screenshot proyek OutGear Station
+- easylive.png    : screenshot proyek EasyLive
 - simple-pos.jpg  : screenshot proyek Simple POS
 
 Gunakan nama file yang sama atau sesuaikan bagian src pada index.html.
