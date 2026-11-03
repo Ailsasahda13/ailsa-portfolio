@@ -16,7 +16,7 @@ navItems.forEach((item) => {
   });
 });
 
-// Menampilkan elemen saat masuk ke area layar.
+// Menampilkan elemen saat masuk ke area layar
 const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
@@ -30,7 +30,7 @@ document.querySelectorAll(".reveal").forEach((element) => {
   revealObserver.observe(element);
 });
 
-// Menandai menu sesuai section yang sedang dibaca.
+// Menandai menu sesuai section yang sedang dibaca
 const sections = document.querySelectorAll("main section[id]");
 const sectionObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
