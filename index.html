@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,18 +8,16 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css?v=202611061420">
 </head>
 <body>
   <header class="site-header">
-    <a class="brand" href="#home" aria-label="Kembali ke halaman utama">ailsa<span>folio.</span></a>
-    <button class="menu-toggle" id="menuToggle" aria-label="Buka navigasi" aria-expanded="false">☰</button>
+    <a class="brand" href="#home" aria-label="Back to home">ailsa<span>folio.</span></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
     <nav class="nav-links" id="navLinks">
       <a href="#about">About</a>
-      <a href="#experience">My Experience</a>
-      <a href="#projects">Projects</a>
-      <a href="#skills">Skills</a>
-      <a class="nav-contact" href="#contact">Let's Talk ↗</a>
+      <a href="#experience">Organization</a>
+      <a href="#projects">Academic Projects</a>
     </nav>
   </header>
 
@@ -28,28 +26,31 @@
 <section class="hero section" id="home">
   <div class="hero-copy reveal">
     <p class="eyebrow"><span class="eyebrow-dot"></span> Business Information Systems Undergraduate Student</p>
-    <h2 class="hero-subtitle">Connecting technology, data, and business <em>into meaningful solutions.</em></h2>
+    <h2 class="hero-subtitle">Hello, I'm <em>Ailsa Sahda</em></h2>
+    <p class="hero-description">Business Information Systems student at Politeknik Negeri Malang, building web and mobile applications with Laravel, MySQL, and Flutter. Experienced in academic projects, with a 2nd-place Business IT award and NVIDIA Prompt Engineering certification; seeking an IT internship.</p>
     <div class="hero-actions">
       <a class="button button-primary" href="#projects">Explore My Work <span>↗</span></a>
       <a class="button button-outline" href="#about">Get to Know Me <span>↗</span></a>
     </div>
   </div>
   
-  <!-- HERO ART: FOTO TEGAK LURUS DENGAN EFEK HOVER GOYANG -->
+  <!-- HERO ART -->
   <div class="hero-art reveal">
-    <div class="art-frame-polaroid">
+    <div class="hero-portrait">
       <div class="clean-photo-wrapper">
-        <img src="assets/images/foto ktm.jpg.jpeg" alt="Ailsa Sahda Garizah" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
-        <div class="image-placeholder"><span>AILSA<br>SAHDA</span><small>Foto Utama</small></div>
+        <button class="image-zoom-button" type="button" aria-label="View a larger profile photo">
+          <img src="assets/images/profile-cutout-final.png" alt="Ailsa Sahda Garizah, pictured from the waist up">
+        </button>
       </div>
-      <div class="polaroid-tag">Ailsa Sahda Garizah</div>
     </div>
-    <!-- Elemen Dekoratif Bintang & Garis Melingkar ala Referensi -->
-    <div class="deco-star star-top">✦</div>
-    <div class="deco-star star-bottom">✦</div>
+    <div class="hero-social-links" aria-label="Social and contact links">
+      <a href="mailto:ailsagarizah@gmail.com" class="social-btn">Email ↗</a>
+      <a href="https://github.com/Ailsasahda13" target="_blank" rel="noopener noreferrer" class="social-btn">GitHub ↗</a>
+      <a href="https://www.linkedin.com/in/ailsasahda" target="_blank" rel="noopener noreferrer" class="social-btn">LinkedIn ↗</a>
+    </div>
   </div>
 
-  <!-- Gelombang di Bagian Bawah Hero -->
+  <!-- Hero wave -->
   <div class="hero-wave">
     <svg viewBox="0 0 1440 120" fill="none" preserveAspectRatio="none">
       <path d="M0,32L60,42.7C120,53,240,75,360,80C480,85,600,75,720,64C840,53,960,43,1080,48C1200,53,1320,75,1380,85.3L1440,96L1440,120L1380,120C1320,120,1200,120,1080,120C960,120,840,120,720,120C600,120,480,120,360,120C240,120,120,120,60,120L0,120Z" fill="#F6F1E7"></path>
@@ -58,98 +59,66 @@
 </section>
 
 <!-- ABOUT SECTION -->
-<section class="section about-section" id="about">
+<section class="section about-section" id="about" lang="en">
   <div class="section-heading reveal">
-    <p class="eyebrow">01 / A LITTLE INTRODUCTION</p>
-    <h2>More about <em>me.</em></h2>
+    <h2>A little about <em>me.</em></h2>
   </div>
 
   <div class="about-card-container reveal">
-    <!-- Kolom Kiri: Kotak Merah Tua Berisi Tools & Tech Stack dengan Ikon Kubus -->
-    <div class="about-left-col">
-      <div class="quote-badge quote-badge-expanded" style="display: flex; flex-direction: column; gap: 1rem; padding: 1.5rem;">
-        <div style="display: flex; align-items: center; gap: 0.5rem;">
-          <span class="sparkle">✦</span>
-          <p class="quote-text" style="margin: 0; font-size: 0.95rem; font-weight: 600; color: #fff;">Core Tools & Tech Stack</p>
-        </div>
-
-        <!-- Grid Tools dengan Gaya Ikon Kotak/Kubus -->
-        <div class="tools-cube-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem; width: 100%;">
-          
-          <!-- Power BI -->
-          <div class="tool-cube-item" style="display: flex; align-items: center; gap: 0.75rem; background: rgba(255, 255, 255, 0.12); padding: 0.5rem 0.75rem; border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.08);">
-            <div style="background: #fff; padding: 4px; border-radius: 6px; display: flex; align-items: center; justify-content: center; width: 24px; height: 24px;">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/powerbi/powerbi-original.svg" alt="Power BI" width="16" height="16" />
-            </div>
-            <span style="font-size: 0.85rem; color: #fff; font-weight: 500;">Power BI</span>
-          </div>
-
-          <!-- VS Code -->
-          <div class="tool-cube-item" style="display: flex; align-items: center; gap: 0.75rem; background: rgba(255, 255, 255, 0.12); padding: 0.5rem 0.75rem; border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.08);">
-            <div style="background: #fff; padding: 4px; border-radius: 6px; display: flex; align-items: center; justify-content: center; width: 24px; height: 24px;">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code" width="16" height="16" />
-            </div>
-            <span style="font-size: 0.85rem; color: #fff; font-weight: 500;">VS Code</span>
-          </div>
-
-          <!-- Laravel -->
-          <div class="tool-cube-item" style="display: flex; align-items: center; gap: 0.75rem; background: rgba(255, 255, 255, 0.12); padding: 0.5rem 0.75rem; border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.08);">
-            <div style="background: #fff; padding: 4px; border-radius: 6px; display: flex; align-items: center; justify-content: center; width: 24px; height: 24px;">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg" alt="Laravel" width="16" height="16" />
-            </div>
-            <span style="font-size: 0.85rem; color: #fff; font-weight: 500;">Laravel</span>
-          </div>
-
-          <!-- MySQL -->
-          <div class="tool-cube-item" style="display: flex; align-items: center; gap: 0.75rem; background: rgba(255, 255, 255, 0.12); padding: 0.5rem 0.75rem; border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.08);">
-            <div style="background: #fff; padding: 4px; border-radius: 6px; display: flex; align-items: center; justify-content: center; width: 24px; height: 24px;">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" width="16" height="16" />
-            </div>
-            <span style="font-size: 0.85rem; color: #fff; font-weight: 500;">MySQL</span>
-          </div>
-
-          <!-- Flutter -->
-          <div class="tool-cube-item" style="display: flex; align-items: center; gap: 0.75rem; background: rgba(255, 255, 255, 0.12); padding: 0.5rem 0.75rem; border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.08);">
-            <div style="background: #fff; padding: 4px; border-radius: 6px; display: flex; align-items: center; justify-content: center; width: 24px; height: 24px;">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="Flutter" width="16" height="16" />
-            </div>
-            <span style="font-size: 0.85rem; color: #fff; font-weight: 500;">Flutter</span>
-          </div>
-
-          <!-- Notion -->
-          <div class="tool-cube-item" style="display: flex; align-items: center; gap: 0.75rem; background: rgba(255, 255, 255, 0.12); padding: 0.5rem 0.75rem; border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.08);">
-            <div style="background: #fff; padding: 4px; border-radius: 6px; display: flex; align-items: center; justify-content: center; width: 24px; height: 24px;">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/notion/notion-original.svg" alt="Notion" width="16" height="16" />
-            </div>
-            <span style="font-size: 0.85rem; color: #fff; font-weight: 500;">Notion</span>
-          </div>
-
-        </div>
+    <div class="about-right-col">
+      <div class="bio-box">
+        <p class="about-panel-label">PROFILE</p>
+        <h3>Bridging business needs and thoughtful technology.</h3>
+        <p>I’m Ailsa Sahda Garizah, a Business Information Systems undergraduate at State Polytechnic of Malang. I enjoy turning real-world needs into useful digital products, from web systems to mobile applications.</p>
+        <p>My project experience includes building applications with Laravel, PHP, MySQL, and Flutter. Beyond the classroom, I serve as Head of Entrepreneurship Staff at HMTI Polinema, supporting student ventures and partnerships.</p>
       </div>
 
-      <!-- Tombol Link Sosial di Bawah Kotak Merah -->
-      <div class="about-social-links">
-        <a href="https://github.com/Ailsasahda13" target="_blank" rel="noopener noreferrer" class="social-btn">GitHub ↗</a>
-        <a href="https://www.linkedin.com/in/ailsasahda" target="_blank" rel="noopener noreferrer" class="social-btn">LinkedIn ↗</a>
-        <a href="mailto:ailsagarizah@gmail.com" class="social-btn social-btn-accent">Email ↗</a>
+      <div class="about-highlights">
+        <article class="about-highlight">
+          <span>ACHIEVEMENT</span>
+          <strong>2nd Place, Business IT</strong>
+          <small>Internal competition · Waste2Worth project</small>
+        </article>
+        <article class="about-highlight">
+          <span>CERTIFICATION</span>
+          <strong>Prompt Engineering</strong>
+          <small>NVIDIA · Building LLM Applications with Prompt Engineering</small>
+        </article>
+      </div>
+
+      <div class="about-focus">
+        <p class="about-panel-label">AREAS OF INTEREST</p>
+        <div class="focus-pills">
+          <span>Web Development</span>
+          <span>Mobile Applications</span>
+          <span>Data & Business Systems</span>
+        </div>
       </div>
     </div>
 
-    <!-- Kolom Kanan: Narasi & Deskripsi Singkat di Bagian Atas -->
-    <div class="about-right-col">
-      <div class="bio-box">
-        <h3>Building digital experiences with heart & code.</h3>
-        <p>Halo! Aku <strong>Ailsa Sahda Garizah</strong>, mahasiswi Sistem Informasi Bisnis di Politeknik Negeri Malang (IPK 3.70/4.00)[cite: 4] dengan pengalaman langsung membangun aplikasi web dan mobile menggunakan Laravel, MySQL, dan Flutter[cite: 4].</p>
-        <p>Selain akademik, aku aktif berorganisasi di HMTI Polinema[cite: 4, 5], memiliki sertifikasi dari NVIDIA di bidang Prompt Engineering[cite: 5], serta peraih juara ke-2 kompetisi Business IT[cite: 4].</p>
+    <div class="about-left-col">
+      <div class="about-tools-panel">
+        <div class="about-tools-heading">
+          <span class="sparkle" aria-hidden="true">✦</span>
+          <div>
+            <p class="about-panel-label">MY TOOLKIT</p>
+            <h3>Tools & technologies</h3>
+          </div>
+        </div>
+        <div class="tools-grid" aria-label="Tools and technologies">
+          <div class="tool-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="" loading="lazy"><span>HTML5</span></div>
+          <div class="tool-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="" loading="lazy"><span>CSS3</span></div>
+          <div class="tool-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="" loading="lazy"><span>JavaScript</span></div>
+          <div class="tool-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="" loading="lazy"><span>PHP</span></div>
+          <div class="tool-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg" alt="" loading="lazy"><span>Laravel</span></div>
+          <div class="tool-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="" loading="lazy"><span>Flutter</span></div>
+          <div class="tool-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" alt="" loading="lazy"><span>Dart</span></div>
+          <div class="tool-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="" loading="lazy"><span>MySQL</span></div>
+          <div class="tool-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="" loading="lazy"><span>Git & GitHub</span></div>
+          <div class="tool-item"><img src="assets/images/powerbi.svg" alt="" loading="lazy"><span>Power BI</span></div>
+        </div>
       </div>
 
-      <!-- Tag Fokus Keahlian -->
-      <div class="focus-pills">
-        <span>Web Dev</span>
-        <span>Mobile Apps</span>
-        <span>Database & Systems</span>
-        <span>NVIDIA Certified</span>
-      </div>
     </div>
   </div>
 </section>
@@ -157,9 +126,9 @@
     <!-- EXPERIENCE SECTION -->
     <section class="section experience-section" id="experience">
       <div class="section-heading reveal">
-        <p class="eyebrow">02 / MY JOURNEY & ACHIEVEMENT</p>
-        <h2>Learning through <em>experience.</em></h2>
-        <p class="section-intro">Perjalanan akademik, pengalaman organisasi, prestasi, dan sertifikasi profesional.</p>
+        <p class="eyebrow">02 / ORGANIZATION</p>
+        <h2>Growing through <em>collaboration.</em></h2>
+        <p class="section-intro">Leadership and committee experience through student organizations and campus programs.</p>
       </div>
       <div class="timeline">
         <article class="timeline-item reveal">
@@ -167,8 +136,8 @@
           <div class="timeline-content">
             <span class="timeline-type">ORGANIZATION</span>
             <h3>Head of Entrepreneurship Staff</h3>
-            <p>Himpunan Mahasiswa Teknologi Informasi (HMTI) Polinema</p>
-            <p class="muted">Mengelola inisiatif kewirausahaan internal, kemitraan produk dengan vendor mahasiswa, dan penjualan merchandise organisasi untuk keberlanjutan finansial[cite: 5].</p>
+            <p>Information Technology Student Association (HMTI), State Polytechnic of Malang</p>
+            <p class="muted">Lead internal entrepreneurship initiatives, build product partnerships with student vendors, and manage merchandise sales to support the organization’s financial sustainability.</p>
           </div>
           <span class="timeline-mark">✳</span>
         </article>
@@ -177,44 +146,111 @@
           <div class="timeline-content">
             <span class="timeline-type">ORGANIZATION & COMMITTEE</span>
             <h3>Research, Interests, & Talent Dept.</h3>
-            <p>Himpunan Mahasiswa Teknologi Informasi (HMTI) Polinema</p>
-            <p class="muted">Berperan sebagai panitia program departemen, bendahara kompetisi internal 2025, serta Steering Committee[cite: 4, 5].</p>
+            <p>Information Technology Student Association (HMTI), State Polytechnic of Malang</p>
+            <p class="muted">Contributed to department programs, served as treasurer for the 2025 internal competition, and supported the team as a Steering Committee member.</p>
           </div>
           <span class="timeline-mark">✳</span>
         </article>
-        <article class="timeline-item reveal">
-          <div class="timeline-date">2025</div>
-          <div class="timeline-content">
-            <span class="timeline-type">ACHIEVEMENT & CERTIFICATION</span>
-            <h3>2nd Place Internal Competition & NVIDIA Certified</h3>
-            <p>Business IT Category & NVIDIA Competency</p>
-            <p class="muted">Meraih Juara 2 kategori Business IT (proyek Waste2Worth)[cite: 4, 5] dan bersertifikasi "Building LLM Applications With Prompt Engineering"[cite: 5].</p>
-          </div>
-          <span class="timeline-mark">✳</span>
-        </article>
+      </div>
+
+      <div class="achievement-section">
+        <div class="section-heading reveal">
+          <p class="eyebrow">ACHIEVEMENTS & CERTIFICATIONS</p>
+          <h2>Milestones worth <em>celebrating.</em></h2>
+          <p class="section-intro">Recognition and certifications earned through my academic and professional journey.</p>
+        </div>
+        <div class="achievement-grid">
+          <article class="achievement-card reveal">
+            <div class="achievement-gallery">
+              <button class="image-zoom-button" type="button">
+                <img src="assets/images/achievement-1.jpg" alt="Ailsa holding the second-place Business IT award at the internal competition" loading="lazy">
+              </button>
+              <button class="image-zoom-button" type="button">
+                <img src="assets/images/achievement-2.jpg" alt="Ailsa and her teammates celebrating their second-place Business IT award" loading="lazy">
+              </button>
+            </div>
+            <div class="achievement-info">
+              <span class="achievement-type">COMPETITION · 2025</span>
+              <h3>2nd Place — Business IT</h3>
+              <p>Recognized for the Waste2Worth project at the internal competition.</p>
+            </div>
+          </article>
+
+          <article class="achievement-card reveal">
+            <div class="certificate-visual">
+              <button class="image-zoom-button" type="button">
+                <img src="assets/images/certificate.png" alt="NVIDIA Certificate of Competency awarded to Ailsa Sahda Garizah for Building LLM Applications with Prompt Engineering" loading="lazy">
+              </button>
+            </div>
+            <div class="achievement-info">
+              <span class="achievement-type">NVIDIA CERTIFICATION · 2025</span>
+              <h3>Building LLM Applications with Prompt Engineering</h3>
+              <p>Certificate of competency awarded by NVIDIA.</p>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 
-<!-- PROJECTS SECTION -->
+    <!-- PROJECTS SECTION -->
     <section class="section projects-section" id="projects">
       <div class="section-heading projects-heading reveal">
-        <div><p class="eyebrow">03 / SELECTED WORK</p><h2>Things I've <em>made.</em></h2></div>
-        <p class="section-intro">Proyek akademik dan pengembangan aplikasi nyata dari CV-ku.</p>
+        <div><p class="eyebrow">03 / ACADEMIC PROJECTS</p><h2>Academic <em>projects.</em></h2></div>
+        <p class="section-intro">Web and mobile applications developed through academic projects.</p>
       </div>
-      <div class="project-grid">
-        
-        <!-- PROYEK 1: OutGear Station (Kelas project-featured sudah dihapus agar setara) -->
+      <div class="project-grid" aria-label="Project list">
+        <!-- PROJECT 1: Otsuka K3 -->
+        <article class="project-card reveal">
+          <div class="project-visual visual-otsuka">
+            <div class="device-frame device-laptop device-laptop-adaptive">
+              <div class="device-screen">
+                <div class="project-gallery" role="group" aria-label="PT Otsuka Indonesia screenshots">
+                  <img class="project-gallery-slide is-active" src="assets/images/otsuka-k3-overview.png" alt="PT Otsuka Indonesia K3 management system website overview" aria-hidden="false">
+                  <img class="project-gallery-slide" src="assets/images/otsuka-k3-pillars.png" alt="PT Otsuka Indonesia website section showing the three K3 culture pillars" aria-hidden="true">
+                  <div class="project-gallery-controls" role="group" aria-label="Choose screenshot">
+                    <button class="project-gallery-control is-active" type="button" aria-label="Show K3 management overview screenshot" aria-pressed="true">1</button>
+                    <button class="project-gallery-control" type="button" aria-label="Show safety culture pillars screenshot" aria-pressed="false">2</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <span class="project-number">01</span>
+            <span class="project-device-badge">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="13" rx="1.5"></rect><path d="M1.5 20h21M8 17l-1 3m9-3 1 3"></path></svg>
+            </span>
+          </div>
+          <div class="project-info">
+            <div>
+              <span class="project-category">WEB EXPERIENCE</span>
+              <h3>PT Otsuka Indonesia</h3>
+              <p>An integrated K3 management system website featuring factory compliance, safety culture pillars, and a real-time hazard reporting flow.</p>
+            </div>
+            <a href="https://github.com/alyfazeha/WebK3OtsukaCompany" target="_blank" rel="noopener noreferrer" class="project-repo-link" title="View GitHub Repository">
+              <span class="project-arrow">↗</span>
+            </a>
+          </div>
+          <div class="tech-tags"><span>Website</span><span>K3 Management</span><span>Responsive UI</span></div>
+        </article>
+
+        <!-- PROJECT 2: OutGear Station -->
         <article class="project-card reveal">
           <div class="project-visual visual-outgear">
-            <img src="assets/images/outgear.png" alt="Screenshot proyek OutGear Station dengan halaman promo Eiger dan Danamon" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
-            <div class="visual-placeholder"><span>OUTGEAR<br>STATION</span><small>Tambahkan outgear.png</small></div>
-            <span class="project-number">01</span>
+            <div class="device-frame device-laptop">
+              <div class="device-screen">
+                <img src="assets/images/outgear.png" alt="OutGear Station website screenshot featuring an Eiger and Danamon promotion" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
+                <div class="visual-placeholder"><span>OUTGEAR<br>STATION</span><small>Add outgear.png</small></div>
+              </div>
+            </div>
+            <span class="project-number">02</span>
+            <span class="project-device-badge">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="13" rx="1.5"></rect><path d="M1.5 20h21M8 17l-1 3m9-3 1 3"></path></svg>
+            </span>
           </div>
           <div class="project-info">
             <div>
               <span class="project-category">WEB APPLICATION</span>
               <h3>OutGear Station</h3>
-              <p>Sistem informasi persewaan alat outdoor berbasis web dengan integrasi POS[cite: 4].</p>
+              <p>A web-based outdoor equipment rental information system with point-of-sale integration.</p>
             </div>
             <a href="https://github.com/fael83/Pbl-Smt5_Outgear-Station" target="_blank" rel="noopener noreferrer" class="project-repo-link" title="View GitHub Repository">
               <span class="project-arrow">↗</span>
@@ -223,18 +259,25 @@
           <div class="tech-tags"><span>Laravel</span><span>MySQL</span><span>POS Integration</span></div>
         </article>
 
-        <!-- PROYEK 2: EasyLive -->
+        <!-- PROJECT 3: EasyLive -->
         <article class="project-card reveal">
           <div class="project-visual visual-easylive">
-            <img src="assets/images/easylive.png" alt="Screenshot aplikasi mobile EasyLive untuk pemesanan kos dan layanan pindahan" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
-            <div class="visual-placeholder"><span>EASY<br>LIVE</span><small>Tambahkan easylive.png</small></div>
-            <span class="project-number">02</span>
+            <div class="device-frame device-phone">
+              <div class="device-screen">
+                <img src="assets/images/easylive.png" alt="EasyLive mobile app screen for boarding house bookings and moving services" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
+                <div class="visual-placeholder"><span>EASY<br>LIVE</span><small>Add easylive.png</small></div>
+              </div>
+            </div>
+            <span class="project-number">03</span>
+            <span class="project-device-badge">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6.5" y="2" width="11" height="20" rx="2"></rect><path d="M10 5h4m-3 14h2"></path></svg>
+            </span>
           </div>
           <div class="project-info">
             <div>
               <span class="project-category">MOBILE APPLICATION</span>
               <h3>EasyLive</h3>
-              <p>Aplikasi mobile terintegrasi untuk penyewaan kos dan layanan pindahan[cite: 4].</p>
+              <p>An integrated mobile app for boarding house rentals and moving services.</p>
             </div>
             <a href="https://github.com/alyfazeha/EasyLive_PBLKelompok1Semester4" target="_blank" rel="noopener noreferrer" class="project-repo-link" title="View GitHub Repository">
               <span class="project-arrow">↗</span>
@@ -243,56 +286,66 @@
           <div class="tech-tags"><span>Flutter</span><span>MVC</span><span>REST API</span></div>
         </article>
 
-        <!-- PROYEK 3: Simple POS -->
+        <!-- PROJECT 4: PBL Lab SE -->
         <article class="project-card reveal">
-          <div class="project-visual visual-pos">
-            <img src="assets/images/simple-pos.jpg" alt="Preview proyek Simple POS" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
-            <div class="visual-placeholder"><span>SIMPLE<br>POS</span><small>Tambahkan simple-pos.jpg</small></div>
-            <span class="project-number">03</span>
+          <div class="project-visual">
+            <div class="device-frame device-laptop device-laptop-adaptive">
+              <div class="device-screen">
+                <div class="project-gallery" role="group" aria-label="PBL Lab SE screenshots">
+                  <img class="project-gallery-slide is-active" src="assets/images/pbl-lab-se-menu-dosen.png" alt="PBL Lab SE lecturer menu with application and lab recruitment options" aria-hidden="false">
+                  <img class="project-gallery-slide" src="assets/images/pbl-lab-se-login-admin.png" alt="PBL Lab SE administrator login page" aria-hidden="true">
+                  <div class="project-gallery-controls" role="group" aria-label="Choose screenshot">
+                    <button class="project-gallery-control is-active" type="button" aria-label="Show lecturer menu screenshot" aria-pressed="true">1</button>
+                    <button class="project-gallery-control" type="button" aria-label="Show administrator login screenshot" aria-pressed="false">2</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <span class="project-number">04</span>
           </div>
           <div class="project-info">
             <div>
-              <span class="project-category">WEB APPLICATION</span>
-              <h3>Simple POS</h3>
-              <p>Aplikasi point of sale berbasis Laravel untuk manajemen produk dan transaksi[cite: 4].</p>
+              <span class="project-category">SOFTWARE ENGINEERING</span>
+              <h3>PBL Lab SE</h3>
+              <p>A software engineering PBL project with an administrator login and a lecturer dashboard for lab requests and recruitment.</p>
             </div>
-            <a href="https://github.com/Ailsasahda13/pwl-pos-244107060006" target="_blank" rel="noopener noreferrer" class="project-repo-link" title="View GitHub Repository">
+            <a href="https://github.com/aiska28/PBL-SE" target="_blank" rel="noopener noreferrer" class="project-repo-link" aria-label="Open PBL Lab SE GitHub repository">
               <span class="project-arrow">↗</span>
             </a>
           </div>
-          <div class="tech-tags"><span>Laravel</span><span>PHP</span><span>MySQL</span></div>
+          <div class="tech-tags"><span>PBL</span><span>Software Engineering</span></div>
         </article>
 
-      </div>
-    </section>
-
-    <!-- SKILLS SECTION -->
-    <section class="section skills-section" id="skills">
-      <div class="section-heading reveal"><p class="eyebrow">04 / WHAT I WORK WITH</p><h2>Tools in my <em>toolbox.</em></h2></div>
-      <div class="skills-layout">
-        <p class="skills-lead reveal">Keahlian teknis dan penunjang pengembangan perangkat lunak sesuai CV-ku.</p>
-        <div class="skill-list reveal">
-          <span>HTML & CSS</span><span>JavaScript</span><span>PHP</span><span>Laravel</span><span>Flutter</span><span>Dart</span><span>MySQL</span><span>Git & GitHub</span><span>Power BI</span><span>Leadership</span><span>Problem Solving</span>
-        </div>
       </div>
     </section>
 
     <!-- CONTACT SECTION -->
     <section class="contact-section" id="contact">
       <div class="contact-inner reveal">
-        <p class="eyebrow">05 / HAVE A PROJECT IN MIND?</p>
         <h2>Let's make something<br><em>meaningful together.</em></h2>
-        <p>Terbuka untuk kesempatan magang, kolaborasi, dan bertukar ide[cite: 4].</p>
-        <a class="button button-light" href="mailto:ailsagarizah@gmail.com">Say hello <span>↗</span></a>
+        <p>Open to internship opportunities, collaborations, and exchanging ideas.</p>
         <div class="contact-links">
           <a href="https://github.com/Ailsasahda13" target="_blank" rel="noreferrer">GitHub ↗</a>
           <a href="https://www.linkedin.com/in/ailsasahda" target="_blank" rel="noreferrer">LinkedIn ↗</a>
-          <a href="mailto:ailsagarizah@gmail.com">Email ↗</a>
         </div>
       </div>
-      <footer><span>© 2026 AILSA SAHDA GARIZAH</span><span>MADE WITH CURIOSITY ✳</span><a href="#home">BACK TO TOP ↑</a></footer>
+      <footer class="site-footer">
+        <div class="footer-meta">
+          <span class="footer-copyright">© 2026 Ailsa Sahda Garizah</span>
+          <span class="footer-note">Designed & built with care</span>
+        </div>
+        <a class="back-to-top" href="#home">
+          <span>Back to top</span>
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 19V5m-7 7 7-7 7 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </footer>
     </section>
   </main>
+  <dialog class="image-lightbox" aria-label="Expanded image">
+    <button class="image-lightbox-close" type="button" aria-label="Close expanded image" autofocus>×</button>
+    <img class="image-lightbox-content" alt="">
+    <p class="image-lightbox-caption"></p>
+  </dialog>
   <script src="js/script.js"></script>
 </body>
 </html>
