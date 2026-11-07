@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=202611071000">
+  <link rel="stylesheet" href="css/style.css?v=202611072126">
 </head>
 <body>
   <header class="site-header">
@@ -68,7 +68,6 @@
 <!-- 01 ABOUT SECTION -->
 <section class="section about-section" id="about" lang="en">
   <div class="section-heading reveal">
-    <p class="eyebrow">01 / ABOUT ME</p>
     <h2>A little about <em>me.</em></h2>
     <p class="section-intro">Personal background and interests.</p>
   </div>
@@ -96,7 +95,7 @@
     <!-- 02 EXPERIENCE SECTION -->
     <section class="section experience-section" id="experience">
       <div class="section-heading reveal">
-        <p class="eyebrow">02 / MY EXPERIENCE</p>
+        <p class="eyebrow">MY EXPERIENCE</p>
         <h2>Growing through <em>collaboration.</em></h2>
         <p class="section-intro">Organization and committee experience.</p>
       </div>
@@ -136,7 +135,7 @@
     <!-- 03 PROJECTS SECTION -->
     <section class="section projects-section" id="projects">
       <div class="section-heading projects-heading reveal">
-        <div><p class="eyebrow">03 / ACADEMIC PROJECTS</p><h2>Projects with <em>purpose.</em></h2></div>
+        <div><p class="eyebrow">ACADEMIC PROJECTS</p><h2>Projects with <em>purpose.</em></h2></div>
         <p class="section-intro">A closer look at the ideas, people, and needs behind each project.</p>
       </div>
       <div class="project-grid" aria-label="Project list">
@@ -176,8 +175,14 @@
           <div class="project-visual visual-outgear">
             <div class="device-frame device-laptop">
               <div class="device-screen">
-                <img src="assets/images/outgear.png" alt="OutGear Station website screenshot featuring an Eiger and Danamon promotion" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
-                <div class="visual-placeholder"><span>OUTGEAR<br>STATION</span><small>Add outgear.png</small></div>
+                <div class="project-gallery" role="group" aria-label="OutGear Station screenshots">
+                  <img class="project-gallery-slide is-active" src="assets/images/outgear-dashboard.png" alt="OutGear Station operational dashboard showing bookings, payments, and equipment inventory" aria-hidden="false">
+                  <img class="project-gallery-slide" src="assets/images/outgear-login.png" alt="OutGear Station login page for the outdoor equipment rental system" aria-hidden="true">
+                  <div class="project-gallery-controls" role="group" aria-label="Choose screenshot">
+                    <button class="project-gallery-control is-active" type="button" aria-label="Show OutGear dashboard screenshot" aria-pressed="true">1</button>
+                    <button class="project-gallery-control" type="button" aria-label="Show OutGear login screenshot" aria-pressed="false">2</button>
+                  </div>
+                </div>
               </div>
             </div>
             <span class="project-device-badge">
@@ -224,7 +229,7 @@
         <!-- PROJECT 4: PBL Lab SE -->
         <article class="project-card reveal">
           <div class="project-visual">
-            <div class="device-frame device-laptop device-laptop-adaptive">
+            <div class="device-frame device-laptop">
               <div class="device-screen">
                 <div class="project-gallery" role="group" aria-label="PBL Lab SE screenshots">
                   <img class="project-gallery-slide is-active" src="assets/images/pbl-lab-se-menu-dosen.png" alt="PBL Lab SE lecturer menu with application and lab recruitment options" aria-hidden="false">
@@ -255,7 +260,7 @@
     <!-- 04 SKILLS SECTION -->
     <section class="section skills-section" id="skills">
       <div class="section-heading reveal">
-        <p class="eyebrow">04 / SKILLS</p>
+        <p class="eyebrow">SKILLS</p>
         <h2>What I bring to <em>the table.</em></h2>
         <p class="section-intro">Technical and people skills developed through coursework, projects, and collaboration.</p>
       </div>
@@ -297,7 +302,7 @@
     <!-- 05 ACHIEVEMENTS SECTION -->
     <section class="section achievements-section" id="achievements">
       <div class="section-heading reveal">
-        <p class="eyebrow">05 / ACHIEVEMENTS & CERTIFICATIONS</p>
+        <p class="eyebrow">ACHIEVEMENTS & CERTIFICATIONS</p>
         <h2>Milestones worth <em>celebrating.</em></h2>
         <p class="section-intro">Recognition and certifications earned through my academic and professional journey.</p>
       </div>
@@ -335,7 +340,7 @@
     <!-- 06 CONTACT SECTION -->
     <section class="contact-section" id="contact">
       <div class="contact-inner reveal">
-        <p class="eyebrow">06 / LET'S TALK</p>
+        <p class="eyebrow">LET'S TALK</p>
         <h2>Let's make something<br><em>meaningful together.</em></h2>
         <p>Open to internship opportunities, collaborations, and exchanging ideas.</p>
         <div class="contact-links">
