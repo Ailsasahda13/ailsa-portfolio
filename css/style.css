@@ -261,7 +261,7 @@ h1 em, h2 em {
 .clean-photo-wrapper {
   width: min(100%, 420px);
   margin-inline: auto;
-  aspect-ratio: 482 / 680;
+  aspect-ratio: 482 / 590;
   position: relative;
   -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
   mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
@@ -299,11 +299,13 @@ h1 em, h2 em {
 /* HERO WAVE & SCROLL CUE */
 .hero-wave {
   position: absolute;
-  bottom: 0;
+  bottom: -1px;
   left: 0;
   width: 100%;
   line-height: 0;
   z-index: 5;
+  background: var(--cream);
+  overflow: hidden;
 }
 
 .hero-wave svg {
