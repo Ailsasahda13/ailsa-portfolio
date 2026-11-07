@@ -91,6 +91,31 @@ imageLightbox.addEventListener("click", (event) => {
   }
 });
 
+// CV Modal Dialog Handlers
+const cvModal = document.getElementById("cvModal");
+const cvTriggers = document.querySelectorAll(".cv-trigger-btn");
+const cvCloseBtn = document.getElementById("closeCvModalBtn");
+
+if (cvModal) {
+  cvTriggers.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      cvModal.showModal();
+    });
+  });
+
+  if (cvCloseBtn) {
+    cvCloseBtn.addEventListener("click", () => {
+      cvModal.close();
+    });
+  }
+
+  cvModal.addEventListener("click", (event) => {
+    if (event.target === cvModal) {
+      cvModal.close();
+    }
+  });
+}
+
 // Menandai menu sesuai section yang sedang dibaca
 const sections = document.querySelectorAll("main section[id]");
 const sectionObserver = new IntersectionObserver((entries) => {

@@ -8,16 +8,19 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=202611061420">
+  <link rel="stylesheet" href="css/style.css?v=202611071000">
 </head>
 <body>
   <header class="site-header">
     <a class="brand" href="#home" aria-label="Back to home">ailsa<span>folio.</span></a>
     <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
     <nav class="nav-links" id="navLinks">
-      <a href="#about">About</a>
-      <a href="#experience">Organization</a>
-      <a href="#projects">Academic Projects</a>
+      <a href="#about">About Me</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#achievements">Achievements</a>
+      <a href="#contact" class="nav-contact">Let's Talk</a>
     </nav>
   </header>
 
@@ -27,7 +30,7 @@
   <div class="hero-copy reveal">
     <p class="eyebrow"><span class="eyebrow-dot"></span> Business Information Systems Undergraduate Student</p>
     <h2 class="hero-subtitle">Hello, I'm <em>Ailsa Sahda</em></h2>
-    <p class="hero-description">Business Information Systems student at Politeknik Negeri Malang, building web and mobile applications with Laravel, MySQL, and Flutter. Experienced in academic projects, with a 2nd-place Business IT award and NVIDIA Prompt Engineering certification; seeking an IT internship.</p>
+    <p class="hero-description">I turn ideas into thoughtful digital experiences that make everyday work and learning easier.</p>
     <div class="hero-actions">
       <a class="button button-primary" href="#projects">Explore My Work <span>↗</span></a>
       <a class="button button-outline" href="#about">Get to Know Me <span>↗</span></a>
@@ -47,6 +50,10 @@
       <a href="mailto:ailsagarizah@gmail.com" class="social-btn">Email ↗</a>
       <a href="https://github.com/Ailsasahda13" target="_blank" rel="noopener noreferrer" class="social-btn">GitHub ↗</a>
       <a href="https://www.linkedin.com/in/ailsasahda" target="_blank" rel="noopener noreferrer" class="social-btn">LinkedIn ↗</a>
+      <button type="button" class="social-btn cv-trigger-btn" id="openCvHeroBtn" aria-haspopup="dialog" aria-controls="cvModal">
+        <svg class="cv-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+        CV ↗
+      </button>
     </div>
   </div>
 
@@ -58,36 +65,25 @@
   </div>
 </section>
 
-<!-- ABOUT SECTION -->
+<!-- 01 ABOUT SECTION -->
 <section class="section about-section" id="about" lang="en">
   <div class="section-heading reveal">
+    <p class="eyebrow">01 / ABOUT ME</p>
     <h2>A little about <em>me.</em></h2>
+    <p class="section-intro">Personal background and interests.</p>
   </div>
 
   <div class="about-card-container reveal">
     <div class="about-right-col">
       <div class="bio-box">
-        <p class="about-panel-label">PROFILE</p>
+        <p class="about-panel-label">PERSONAL BACKGROUND</p>
         <h3>Bridging business needs and thoughtful technology.</h3>
         <p>I’m Ailsa Sahda Garizah, a Business Information Systems undergraduate at State Polytechnic of Malang. I enjoy turning real-world needs into useful digital products, from web systems to mobile applications.</p>
-        <p>My project experience includes building applications with Laravel, PHP, MySQL, and Flutter. Beyond the classroom, I serve as Head of Entrepreneurship Staff at HMTI Polinema, supporting student ventures and partnerships.</p>
-      </div>
-
-      <div class="about-highlights">
-        <article class="about-highlight">
-          <span>ACHIEVEMENT</span>
-          <strong>2nd Place, Business IT</strong>
-          <small>Internal competition · Waste2Worth project</small>
-        </article>
-        <article class="about-highlight">
-          <span>CERTIFICATION</span>
-          <strong>Prompt Engineering</strong>
-          <small>NVIDIA · Building LLM Applications with Prompt Engineering</small>
-        </article>
+        <p>Through academic projects, I enjoy exploring how digital solutions can respond to practical needs. Beyond the classroom, I serve as Head of Entrepreneurship Staff at HMTI Polinema, supporting student ventures and partnerships.</p>
       </div>
 
       <div class="about-focus">
-        <p class="about-panel-label">AREAS OF INTEREST</p>
+        <p class="about-panel-label">PERSONAL INTERESTS</p>
         <div class="focus-pills">
           <span>Web Development</span>
           <span>Mobile Applications</span>
@@ -95,40 +91,15 @@
         </div>
       </div>
     </div>
-
-    <div class="about-left-col">
-      <div class="about-tools-panel">
-        <div class="about-tools-heading">
-          <span class="sparkle" aria-hidden="true">✦</span>
-          <div>
-            <p class="about-panel-label">MY TOOLKIT</p>
-            <h3>Tools & technologies</h3>
-          </div>
-        </div>
-        <div class="tools-grid" aria-label="Tools and technologies">
-          <div class="tool-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="" loading="lazy"><span>HTML5</span></div>
-          <div class="tool-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="" loading="lazy"><span>CSS3</span></div>
-          <div class="tool-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="" loading="lazy"><span>JavaScript</span></div>
-          <div class="tool-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="" loading="lazy"><span>PHP</span></div>
-          <div class="tool-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg" alt="" loading="lazy"><span>Laravel</span></div>
-          <div class="tool-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="" loading="lazy"><span>Flutter</span></div>
-          <div class="tool-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" alt="" loading="lazy"><span>Dart</span></div>
-          <div class="tool-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="" loading="lazy"><span>MySQL</span></div>
-          <div class="tool-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="" loading="lazy"><span>Git & GitHub</span></div>
-          <div class="tool-item"><img src="assets/images/powerbi.svg" alt="" loading="lazy"><span>Power BI</span></div>
-        </div>
-      </div>
-
-    </div>
   </div>
 </section>
 
-    <!-- EXPERIENCE SECTION -->
+    <!-- 02 EXPERIENCE SECTION -->
     <section class="section experience-section" id="experience">
       <div class="section-heading reveal">
-        <p class="eyebrow">02 / ORGANIZATION</p>
+        <p class="eyebrow">02 / MY EXPERIENCE</p>
         <h2>Growing through <em>collaboration.</em></h2>
-        <p class="section-intro">Leadership and committee experience through student organizations and campus programs.</p>
+        <p class="section-intro">Organization and committee experience.</p>
       </div>
       <div class="timeline">
         <article class="timeline-item reveal">
@@ -153,50 +124,13 @@
         </article>
       </div>
 
-      <div class="achievement-section">
-        <div class="section-heading reveal">
-          <p class="eyebrow">ACHIEVEMENTS & CERTIFICATIONS</p>
-          <h2>Milestones worth <em>celebrating.</em></h2>
-          <p class="section-intro">Recognition and certifications earned through my academic and professional journey.</p>
-        </div>
-        <div class="achievement-grid">
-          <article class="achievement-card reveal">
-            <div class="achievement-gallery">
-              <button class="image-zoom-button" type="button">
-                <img src="assets/images/achievement-1.jpg" alt="Ailsa holding the second-place Business IT award at the internal competition" loading="lazy">
-              </button>
-              <button class="image-zoom-button" type="button">
-                <img src="assets/images/achievement-2.jpg" alt="Ailsa and her teammates celebrating their second-place Business IT award" loading="lazy">
-              </button>
-            </div>
-            <div class="achievement-info">
-              <span class="achievement-type">COMPETITION · 2025</span>
-              <h3>2nd Place — Business IT</h3>
-              <p>Recognized for the Waste2Worth project at the internal competition.</p>
-            </div>
-          </article>
-
-          <article class="achievement-card reveal">
-            <div class="certificate-visual">
-              <button class="image-zoom-button" type="button">
-                <img src="assets/images/certificate.png" alt="NVIDIA Certificate of Competency awarded to Ailsa Sahda Garizah for Building LLM Applications with Prompt Engineering" loading="lazy">
-              </button>
-            </div>
-            <div class="achievement-info">
-              <span class="achievement-type">NVIDIA CERTIFICATION · 2025</span>
-              <h3>Building LLM Applications with Prompt Engineering</h3>
-              <p>Certificate of competency awarded by NVIDIA.</p>
-            </div>
-          </article>
-        </div>
-      </div>
     </section>
 
-    <!-- PROJECTS SECTION -->
+    <!-- 03 PROJECTS SECTION -->
     <section class="section projects-section" id="projects">
       <div class="section-heading projects-heading reveal">
-        <div><p class="eyebrow">03 / ACADEMIC PROJECTS</p><h2>Academic <em>projects.</em></h2></div>
-        <p class="section-intro">Web and mobile applications developed through academic projects.</p>
+        <div><p class="eyebrow">03 / ACADEMIC PROJECTS</p><h2>Projects with <em>purpose.</em></h2></div>
+        <p class="section-intro">A closer look at the ideas, people, and needs behind each project.</p>
       </div>
       <div class="project-grid" aria-label="Project list">
         <!-- PROJECT 1: Otsuka K3 -->
@@ -223,13 +157,12 @@
             <div>
               <span class="project-category">WEB EXPERIENCE</span>
               <h3>PT Otsuka Indonesia</h3>
-              <p>An integrated K3 management system website featuring factory compliance, safety culture pillars, and a real-time hazard reporting flow.</p>
+              <p>A central place for employees to understand workplace safety, explore the company’s K3 culture pillars, and report hazards. The project brings safety guidance and reporting into one clear experience.</p>
             </div>
             <a href="https://github.com/alyfazeha/WebK3OtsukaCompany" target="_blank" rel="noopener noreferrer" class="project-repo-link" title="View GitHub Repository">
               <span class="project-arrow">↗</span>
             </a>
           </div>
-          <div class="tech-tags"><span>Website</span><span>K3 Management</span><span>Responsive UI</span></div>
         </article>
 
         <!-- PROJECT 2: OutGear Station -->
@@ -250,13 +183,12 @@
             <div>
               <span class="project-category">WEB APPLICATION</span>
               <h3>OutGear Station</h3>
-              <p>A web-based outdoor equipment rental information system with point-of-sale integration.</p>
+              <p>An information system for renting outdoor equipment, designed to make it easier to browse available gear and manage rental transactions. Point-of-sale integration supports a more connected rental process.</p>
             </div>
             <a href="https://github.com/fael83/Pbl-Smt5_Outgear-Station" target="_blank" rel="noopener noreferrer" class="project-repo-link" title="View GitHub Repository">
               <span class="project-arrow">↗</span>
             </a>
           </div>
-          <div class="tech-tags"><span>Laravel</span><span>MySQL</span><span>POS Integration</span></div>
         </article>
 
         <!-- PROJECT 3: EasyLive -->
@@ -277,13 +209,12 @@
             <div>
               <span class="project-category">MOBILE APPLICATION</span>
               <h3>EasyLive</h3>
-              <p>An integrated mobile app for boarding house rentals and moving services.</p>
+              <p>A mobile service that brings boarding house rentals and moving support together. It helps people explore a place to live and plan the practical steps of moving in one experience.</p>
             </div>
             <a href="https://github.com/alyfazeha/EasyLive_PBLKelompok1Semester4" target="_blank" rel="noopener noreferrer" class="project-repo-link" title="View GitHub Repository">
               <span class="project-arrow">↗</span>
             </a>
           </div>
-          <div class="tech-tags"><span>Flutter</span><span>MVC</span><span>REST API</span></div>
         </article>
 
         <!-- PROJECT 4: PBL Lab SE -->
@@ -307,26 +238,111 @@
             <div>
               <span class="project-category">SOFTWARE ENGINEERING</span>
               <h3>PBL Lab SE</h3>
-              <p>A software engineering PBL project with an administrator login and a lecturer dashboard for lab requests and recruitment.</p>
+              <p>A lab administration portal that gives lecturers a place to submit lab requests and explore recruitment opportunities, alongside a dedicated administrator sign-in.</p>
             </div>
             <a href="https://github.com/aiska28/PBL-SE" target="_blank" rel="noopener noreferrer" class="project-repo-link" aria-label="Open PBL Lab SE GitHub repository">
               <span class="project-arrow">↗</span>
             </a>
           </div>
-          <div class="tech-tags"><span>PBL</span><span>Software Engineering</span></div>
         </article>
 
       </div>
     </section>
 
-    <!-- CONTACT SECTION -->
+    <!-- 04 SKILLS SECTION -->
+    <section class="section skills-section" id="skills">
+      <div class="section-heading reveal">
+        <p class="eyebrow">04 / SKILLS</p>
+        <h2>What I bring to <em>the table.</em></h2>
+        <p class="section-intro">Technical and people skills developed through coursework, projects, and collaboration.</p>
+      </div>
+      <div class="skills-layout">
+        <div class="skills-panel reveal">
+          <div class="about-tools-heading">
+            <span class="sparkle" aria-hidden="true">✦</span>
+            <div>
+              <p class="about-panel-label">TECHNICAL SKILLS</p>
+              <h3>Tools & technologies</h3>
+            </div>
+          </div>
+          <div class="tools-grid" aria-label="Technical skills">
+            <div class="tool-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="" loading="lazy"><span>HTML5</span></div>
+            <div class="tool-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="" loading="lazy"><span>CSS3</span></div>
+            <div class="tool-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="" loading="lazy"><span>JavaScript</span></div>
+            <div class="tool-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="" loading="lazy"><span>PHP</span></div>
+            <div class="tool-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg" alt="" loading="lazy"><span>Laravel</span></div>
+            <div class="tool-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="" loading="lazy"><span>Flutter</span></div>
+            <div class="tool-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" alt="" loading="lazy"><span>Dart</span></div>
+            <div class="tool-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="" loading="lazy"><span>MySQL</span></div>
+            <div class="tool-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="" loading="lazy"><span>Git & GitHub</span></div>
+            <div class="tool-item"><img src="assets/images/powerbi.svg" alt="" loading="lazy"><span>Power BI</span></div>
+          </div>
+        </div>
+        <div class="soft-skills-panel reveal">
+          <p class="about-panel-label">SOFT SKILLS</p>
+          <h3>How I work with people.</h3>
+          <ul class="soft-skills-list">
+            <li>Communication & collaboration</li>
+            <li>Leadership & initiative</li>
+            <li>Adaptability & continuous learning</li>
+            <li>Organization & responsibility</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05 ACHIEVEMENTS SECTION -->
+    <section class="section achievements-section" id="achievements">
+      <div class="section-heading reveal">
+        <p class="eyebrow">05 / ACHIEVEMENTS & CERTIFICATIONS</p>
+        <h2>Milestones worth <em>celebrating.</em></h2>
+        <p class="section-intro">Recognition and certifications earned through my academic and professional journey.</p>
+      </div>
+      <div class="achievement-grid">
+        <article class="achievement-card reveal">
+          <div class="achievement-gallery">
+            <button class="image-zoom-button" type="button" aria-label="View first Business IT award photo">
+              <img src="assets/images/achievement-1.jpg" alt="Ailsa holding the second-place Business IT award at the internal competition" loading="lazy">
+            </button>
+            <button class="image-zoom-button" type="button" aria-label="View second Business IT award photo">
+              <img src="assets/images/achievement-2.jpg" alt="Ailsa and her teammates celebrating their second-place Business IT award" loading="lazy">
+            </button>
+          </div>
+          <div class="achievement-info">
+            <span class="achievement-type">COMPETITION · 2025</span>
+            <h3>2nd Place — Business IT</h3>
+            <p>Recognized for the Waste2Worth project at the internal competition.</p>
+          </div>
+        </article>
+        <article class="achievement-card reveal">
+          <div class="certificate-visual">
+            <button class="image-zoom-button" type="button">
+              <img src="assets/images/certificate.png" alt="NVIDIA Certificate of Competency awarded to Ailsa Sahda Garizah for Building LLM Applications with Prompt Engineering" loading="lazy">
+            </button>
+          </div>
+          <div class="achievement-info">
+            <span class="achievement-type">NVIDIA CERTIFICATION · 2025</span>
+            <h3>Building LLM Applications with Prompt Engineering</h3>
+            <p>Certificate of competency awarded by NVIDIA.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 06 CONTACT SECTION -->
     <section class="contact-section" id="contact">
       <div class="contact-inner reveal">
+        <p class="eyebrow">06 / LET'S TALK</p>
         <h2>Let's make something<br><em>meaningful together.</em></h2>
         <p>Open to internship opportunities, collaborations, and exchanging ideas.</p>
         <div class="contact-links">
+          <a href="mailto:ailsagarizah@gmail.com">Email ↗</a>
           <a href="https://github.com/Ailsasahda13" target="_blank" rel="noreferrer">GitHub ↗</a>
           <a href="https://www.linkedin.com/in/ailsasahda" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+          <button type="button" class="contact-cv-btn cv-trigger-btn" id="openCvContactBtn" aria-haspopup="dialog" aria-controls="cvModal">
+            <svg class="cv-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+            Curriculum Vitae ↗
+          </button>
         </div>
       </div>
       <footer class="site-footer">
@@ -341,6 +357,49 @@
       </footer>
     </section>
   </main>
+  <!-- CV VIEWER MODAL DIALOG -->
+  <dialog id="cvModal" class="cv-modal" aria-labelledby="cvModalTitle">
+    <div class="cv-modal-shell">
+      <header class="cv-modal-header">
+        <div class="cv-modal-identity">
+          <span class="cv-badge">CURRICULUM VITAE</span>
+          <h3 id="cvModalTitle">Ailsa Sahda Garizah</h3>
+          <p class="cv-modal-subtitle">Politeknik Negeri Malang · GPA 3.70 / 4.00 · Information Technology</p>
+        </div>
+        <div class="cv-modal-actions">
+          <a href="assets/docs/cv-ailsa-sahda-garizah.pdf" download="CV_Ailsa_Sahda_Garizah.pdf" class="cv-action-btn cv-action-download" title="Unduh Curriculum Vitae (PDF)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+            <span>Download PDF</span>
+          </a>
+          <a href="assets/docs/cv-ailsa-sahda-garizah.pdf" target="_blank" rel="noopener noreferrer" class="cv-action-btn cv-action-external" title="Buka PDF di tab baru">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+              <polyline points="15 3 21 3 21 9"></polyline>
+              <line x1="10" y1="14" x2="21" y2="3"></line>
+            </svg>
+            <span>Buka di Tab Baru ↗</span>
+          </a>
+          <button type="button" class="cv-close-btn" id="closeCvModalBtn" aria-label="Tutup preview CV">✕</button>
+        </div>
+      </header>
+
+      <div class="cv-modal-body">
+        <iframe src="assets/docs/cv-ailsa-sahda-garizah.pdf#view=FitH" title="Curriculum Vitae Ailsa Sahda Garizah" class="cv-iframe" id="cvIframe" loading="lazy"></iframe>
+        <div class="cv-mobile-hint">
+          <p>Pratinjau PDF tidak muncul otomatis di layar Anda?</p>
+          <div class="cv-mobile-hint-actions">
+            <a href="assets/docs/cv-ailsa-sahda-garizah.pdf" target="_blank" rel="noopener noreferrer" class="cv-hint-btn">Buka Fullscreen PDF ↗</a>
+            <a href="assets/docs/cv-ailsa-sahda-garizah.pdf" download="CV_Ailsa_Sahda_Garizah.pdf" class="cv-hint-btn cv-hint-outline">Unduh CV ⤓</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
   <dialog class="image-lightbox" aria-label="Expanded image">
     <button class="image-lightbox-close" type="button" aria-label="Close expanded image" autofocus>×</button>
     <img class="image-lightbox-content" alt="">
